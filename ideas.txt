@@ -1,0 +1,12 @@
+- Restaurante Jambalaya
+	-> cenario com mesas de fundo
+	-> obstaculos = tiazinhas andando esquerda pra direita (talvez em diagonal tbm)
+	-> Movimentacao (espaco pra formar ondas e passar das tiazinhas com as marmitas na mao)
+
+- Ruas entre restaurante e office
+
+- Office
+
+- Elevador do P4
+
+- Sala do Jamba
