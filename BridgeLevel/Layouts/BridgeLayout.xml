@@ -747,8 +747,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>830</x>
-                        <y>562</y>
+                        <x>465.437988281</x>
+                        <y>567.479003906</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>
@@ -811,14 +811,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="Array" uid="15">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>
