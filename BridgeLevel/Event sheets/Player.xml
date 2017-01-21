@@ -30,6 +30,7 @@
                     <param id="0" name="Instance variable">MoveEnabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="446503904936088" type="Player" />
                 <action id="0" name="Call function" sid="324651953835894" type="Function">
                     <param id="0" name="Name">&quot;DebugPrint&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Silviao is starting to move.&quot;</param>
@@ -45,6 +46,7 @@
                     <param id="0" name="Instance variable">PathFound</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="254629562746301" type="Player" />
                 <action id="0" name="Call function" sid="244455820285610" type="Function">
                     <param id="0" name="Name">&quot;DebugPrint&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Found path.&quot;</param>
@@ -79,7 +81,7 @@
                 <action id="-26" name="Restart layout" sid="344043349191402" type="System" />
             </actions>
         </event-block>
-        <event-block sid="997493374105881">
+        <event-block disabled="1" sid="997493374105881">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="317962436576237" type="Player">
                     <param id="0" name="Instance variable">MoveEnabled</param>
@@ -89,12 +91,30 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="716150446974761" type="Player" />
+                <action behavior="Pathfinding" disabled="1" id="1" name="Move along path" sid="716150446974761" type="Player" />
                 <action id="0" name="Call function" sid="916088269827123" type="Function">
                     <param id="0" name="Name">&quot;DebugPrint&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Silviao is moving.&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="971181136457175">
+            <conditions>
+                <condition id="-11" name="For Each" sid="879901744577755" type="System">
+                    <param id="0" name="Object">BridgeBit</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="556060658048368">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="418130148356801" type="Player">
+                            <param id="0" name="Object">BridgeBit</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
