@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>temperature</name>
+    <events>
+        <variable constant="0" name="aux" sid="269384605939904" static="0" type="number">1</variable>
+        <variable constant="0" name="FLOOR_TEMPERATURE" sid="659747047063305" static="0" type="number">0</variable>
+        <event-block sid="302948870310539">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="177638548902566" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="765268464080021" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Value">5 * aux</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="546686993905645" type="tiles">
+                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">FLOOR_TEMPERATURE + 50</param>
+                </action>
+                <action id="-28" name="Set effect parameter" sid="700111705359431" type="tiles">
+                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                    <param id="1" name="Parameter index">2</param>
+                    <param id="2" name="Value">50 - FLOOR_TEMPERATURE</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="443249158165047">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="922139214258162" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="402989894772903" type="System">
+                    <param id="0" name="Variable">aux</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="203174938695195">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="719233949433551" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="682476254529330" type="System">
+                    <param id="0" name="Variable">aux</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
