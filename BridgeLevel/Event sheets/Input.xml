@@ -88,10 +88,6 @@
                     <param id="0" name="Instance variable">StartingMagnitude</param>
                     <param id="1" name="Value">BridgeBit.Movement.Magnitude</param>
                 </action>
-                <action disabled="1" id="-10" name="Add to" sid="639177141321922" type="System">
-                    <param id="0" name="Variable">DebugString</param>
-                    <param id="1" name="Value">&quot;StoreMagnitude{&quot;&amp;BridgeBit.UID&amp;&quot;} = &quot;&amp;BridgeBit.Movement.Magnitude&amp;newline</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="145453153002226">
@@ -104,16 +100,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Movement" disabled="1" id="2" name="Set magnitude" sid="289160312742763" type="BridgeBit">
-                    <param id="0" name="Magnitude">BridgeBit.StartingMagnitude</param>
-                </action>
                 <action id="-10" name="Set value" sid="307498084245337" type="BridgeBit">
                     <param id="0" name="Instance variable">TargetMagnitude</param>
                     <param id="1" name="Value">BridgeBit.StartingMagnitude</param>
-                </action>
-                <action disabled="1" id="-10" name="Add to" sid="622245953513946" type="System">
-                    <param id="0" name="Variable">DebugString</param>
-                    <param id="1" name="Value">&quot;ResetMagnitude{&quot;&amp;BridgeBit.UID&amp;&quot;} = &quot;&amp;BridgeBit.Movement.Magnitude&amp;newline</param>
                 </action>
             </actions>
         </event-block>
@@ -127,10 +116,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-10" name="Add to" sid="119408490492419" type="System">
-                    <param id="0" name="Variable">DebugString</param>
-                    <param id="1" name="Value">&quot;StartingMagnitude{&quot;&amp;BridgeBit.UID&amp;&quot;} = &quot;&amp;BridgeBit.Movement.Magnitude&amp;newline</param>
-                </action>
                 <action id="-10" name="Set value" sid="979334310444509" type="BridgeBit">
                     <param id="0" name="Instance variable">TargetMagnitude</param>
                     <param id="1" name="Value">Function.Param(1) * BridgeBit.StartingMagnitude</param>
