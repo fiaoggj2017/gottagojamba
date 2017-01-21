@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Silviao</name>
+    <events>
+        <event-block sid="191017385502763">
+            <conditions>
+                <condition id="-18" name="On created" sid="735036614284035" type="Silviao" />
+            </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="464000742200218" type="Silviao">
+                    <param id="0" name="Duration">Silviao.WaitingTimeInSeconds</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;StartMoving&quot;</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="480537276725100" type="Silviao">
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939220324822283">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="945375495272319" type="Silviao">
+                    <param id="0" name="Tag">&quot;StartMoving&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="459495099504455" type="Silviao">
+                    <param id="0" name="Instance variable">MoveEnabled</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="324651953835894" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Silviao is starting to move.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="934218104775447">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="801395612001644" type="Silviao" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="686077256157926" type="Silviao">
+                    <param id="0" name="Instance variable">PathFound</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="244455820285610" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Found path.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="742535931366679">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="724811226088215" type="Silviao" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="297365458558889" type="Silviao">
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
+                </action>
+                <action id="0" name="Call function" sid="123299289532470" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Failed to find path.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="631073704486754">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="216361851719123" type="Silviao">
+                    <param id="0" name="Object">ExitDoor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-43" name="Go to next/previous layout" sid="505632177965571" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="344043349191402" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="997493374105881">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="317962436576237" type="Silviao">
+                    <param id="0" name="Instance variable">MoveEnabled</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="369919186515838" type="Silviao">
+                    <param id="0" name="Instance variable">PathFound</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="716150446974761" type="Silviao" />
+                <action id="0" name="Call function" sid="916088269827123" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Silviao is moving.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
