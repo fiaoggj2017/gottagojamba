@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>start layout</name>
+    <events>
+        <event-block sid="849810407667777">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="318417678247455" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="436021582785368" type="tiles">
+                    <param id="0" name="Pin to">elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="115308541011083" type="PlayerAnimation">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="162606705202842" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="423363929274423" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
