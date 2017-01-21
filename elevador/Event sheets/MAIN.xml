@@ -3,8 +3,24 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MAIN</name>
     <events>
+        <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
         <include>start layout</include>
         <include>temperature</include>
         <include>input</include>
+        <event-block sid="859657469143419">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="550666694949074" type="System">
+                    <param id="0" name="Variable">VARIANCE</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="696219442663947" type="Text">
+                    <param id="0" name="Text">Self.Text &amp; &quot;YOU DIED!&quot; &amp; newline</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

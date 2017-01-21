@@ -3,6 +3,89 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>input</name>
     <events>
-        <variable constant="0" name="PLAYER_TEMPERATURE" sid="935595329318200" static="0" type="number">0</variable>
+        <variable constant="0" name="PLAYER_TEMPERATURE" sid="412797026514185" static="0" type="number">0</variable>
+        <event-block sid="241866248697375">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="411333219145543" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="110814408168307" type="indicator">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">temperatureBar.X + temperatureBar.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="652115193727383" type="indicator">
+                    <param id="0" name="X">indicator.X + (temperatureBar.Width / 10)</param>
+                </action>
+                <action id="-10" name="Add to" sid="774902862991048" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="347037869029867">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="303127905348820" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="590009182242289" type="indicator">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">temperatureBar.X - temperatureBar.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="172945817078346" type="indicator">
+                    <param id="0" name="X">indicator.X - (temperatureBar.Width / 10)</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="191963278970215" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="771844430357981">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="510975511939535" type="indicator">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">temperatureBar.X - temperatureBar.Width/2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="919594879212143" type="indicator">
+                    <param id="0" name="X">temperatureBar.X - temperatureBar.Width / 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="766169026748888">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="870791617518594" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">-50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="866900003257937" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">-50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="678166175017290">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="817059060794636" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="860417245051316" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
