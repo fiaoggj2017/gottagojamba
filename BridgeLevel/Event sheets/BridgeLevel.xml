@@ -5,6 +5,7 @@
     <events>
         <include>DebugConsole</include>
         <include>Input</include>
-        <include>Silviao</include>
+        <include>Player</include>
+        <include>PlayerAnimation</include>
     </events>
 </c2eventsheet>

@@ -61,12 +61,7 @@
                                     <param id="0" name="Object">BridgeBit</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="382238582726635" type="Function">
-                                    <param id="0" name="Name">&quot;UpdateMagnitudes&quot;</param>
-                                    <param id="1" name="Parameter {n}">BridgeBit.UID{###}abs((Silviao.Sine.Period - 2*(time - LastTimeButtonWasPressed))/Silviao.Sine.Period)</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
