@@ -1,28 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Jamba</name>
+    <name>BridgeLevel</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
-    <unique-id>2pfhbuse19phf</unique-id>
+    <unique-id>3oo0ytmk6flqu</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -52,127 +50,122 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Obstacle" sid="790706888170211">
+        <object-type name="ExitDoor" sid="412410671773174">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409351849588794" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BridgeBit" sid="986030925293717">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="StartingPeriod" sid="410966431075785" type="number" />
-                <instance-variable name="TargetPeriod" sid="277517688533981" type="number" />
+                <instance-variable name="StartingMagnitude" sid="657955115296297" type="number" />
+                <instance-variable name="TargetMagnitude" sid="337836920164833" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Sine" sid="452995523812481">
+                <behavior-type name="Vibration" sid="812093200993158">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="Movement" sid="493991865333333">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="StayOnScreen" sid="298645836572793">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534873327359492" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759816704583746" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Keyboard" sid="315625276658010">
-            <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Console" sid="747013224026323">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Persist" sid="161672102399547">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="Browser" sid="877259452535762">
-            <plugin id="Browser" />
-        </object-type>
-        <object-type name="Trail" sid="259233337721024">
+        <object-type name="LeftBoundary" sid="393064383723713">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Persist" sid="459353730608551">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215952327534079" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Lunch" sid="932006857008762">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Persist" sid="818885005800747">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568761814451924" speed="5">
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TiledBackground" sid="529875978527172">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\jamba\Textures\TiledBackground.png" />
-        </object-type>
-        <object-type name="ExitDoor" sid="808490603696994">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245857897955300" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Wall" sid="459861493599636">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="499551188039709">
+                <behavior-type name="Solid" sid="147711765838219">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344803447275547" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="899131545043336" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Stats" sid="655116816625855">
-            <plugin id="Text" />
+        <object-type name="RightBoundary" sid="739545763849715">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="910722197519383">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="982755179343690" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.6" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
-        <object-type name="Player" sid="117990735216178">
+        <object-type name="DebugConsole" sid="843786612488356">
+            <plugin id="TextBox" />
+            <instance-variables>
+                <instance-variable name="ConsoleVisible" sid="471462629217915" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Keyboard" sid="907212716482698">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Function" sid="739559503188991">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Player" sid="860578861348761">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="WaitingTimeInSeconds" sid="962657731320625" type="number" />
-                <instance-variable name="MoveEnabled" sid="170722939433073" type="boolean" />
-                <instance-variable name="PathFound" sid="636779977428684" type="boolean" />
+                <instance-variable name="WaitingTimeInSeconds" sid="726292162322479" type="number" />
+                <instance-variable name="MoveEnabled" sid="802275444349180" type="boolean" />
+                <instance-variable name="PathFound" sid="283892924034425" type="boolean" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Sine" sid="553640128254918">
+                <behavior-type name="Sine" sid="589836829079419">
                     <behavior id="Sin" />
                 </behavior-type>
-                <behavior-type name="Pathfinding" sid="753388947467801">
+                <behavior-type name="Pathfinding" sid="380449829772852">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="Timer" sid="776059960818004">
+                <behavior-type name="Timer" sid="768523717442981">
                     <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="237995846906196" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="717224936221127" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="PlayerAngle" sid="254561814040325">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="PlayerAnimation" sid="511118302991723">
+        <object-type name="PlayerAnimation" sid="742552663542838">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Pin" sid="134067891826103">
+                <behavior-type name="Pin" sid="871520868910020">
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="11" loop="1" name="runDown" pingpong="0" repeatcount="1" repeatto="0" sid="529923554472014" speed="15">
+                <animation framecount="11" loop="1" name="runDown" pingpong="0" repeatcount="1" repeatto="0" sid="312833982145366" speed="15">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -220,7 +213,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="12" loop="1" name="runUp" pingpong="0" repeatcount="1" repeatto="0" sid="663922983575983" speed="15">
+                <animation framecount="12" loop="1" name="runUp" pingpong="0" repeatcount="1" repeatto="0" sid="257657879690673" speed="15">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -269,7 +262,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="6" loop="1" name="runRight" pingpong="0" repeatcount="1" repeatto="0" sid="562661641121886" speed="15">
+                <animation framecount="6" loop="1" name="runRight" pingpong="0" repeatcount="1" repeatto="0" sid="859757316997961" speed="15">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -277,7 +270,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="6" loop="1" name="runLeft" pingpong="0" repeatcount="1" repeatto="0" sid="952438364163116" speed="15">
+                <animation framecount="6" loop="1" name="runLeft" pingpong="0" repeatcount="1" repeatto="0" sid="584301192871860" speed="15">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="1" y="1" />
@@ -329,24 +322,21 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Function" sid="516909908883304">
-            <plugin id="Function" />
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>BridgeLayout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>Input.xml</event-sheet>
+        <event-sheet>BridgeLevel.xml</event-sheet>
+        <event-sheet>DebugConsole.xml</event-sheet>
         <event-sheet>PlayerAnimation.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1" />
-        <global-instance type="Browser" uid="3" />
-        <global-instance type="Function" uid="2" />
+        <global-instance type="Keyboard" uid="14" />
+        <global-instance type="Function" uid="16" />
     </global-instances>
     <sounds-folder />
     <music-folder />

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Input</name>
+    <events>
+        <variable constant="0" name="LastTimeButtonWasPressed" sid="351198628518649" static="0" type="number">0</variable>
+        <event-block sid="238810946293569">
+            <conditions>
+                <condition id="-18" name="On created" sid="481566169930617" type="BridgeBit" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="902447355690594" type="Function">
+                    <param id="0" name="Name">&quot;StoreMagnitudes&quot;</param>
+                    <param id="1" name="Parameter {n}">BridgeBit.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="800946021006461">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="462990787813987" type="System">
+                    <param id="0" name="First value">time - LastTimeButtonWasPressed</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="820451871435265" type="System">
+                    <param id="0" name="Object">BridgeBit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="356005197656375" type="Function">
+                    <param id="0" name="Name">&quot;ResetMagnitudes&quot;</param>
+                    <param id="1" name="Parameter {n}">BridgeBit.UID</param>
+                </action>
+                <action id="-9" name="Set value" sid="747121911002360" type="System">
+                    <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107549384112497">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="217624673325070" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="714608211653537">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="553029741098570" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="357492017468379" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="182656062314961" type="Function">
+                            <param id="0" name="Name">&quot;UpdateMagnitudes&quot;</param>
+                            <param id="1" name="Parameter {n}">BridgeBit.UID{###}abs((Player.Sine.Period - 2 * (time - LastTimeButtonWasPressed)) / Player.Sine.Period)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388573253499603">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="369575923345366" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="892916990725759">
+            <conditions>
+                <condition id="0" name="On function" sid="865797794385459" type="Function">
+                    <param id="0" name="Name">&quot;StoreMagnitudes&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="507300082143236" type="BridgeBit">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="669649139910530" type="BridgeBit">
+                    <param id="0" name="Instance variable">StartingMagnitude</param>
+                    <param id="1" name="Value">BridgeBit.Movement.Magnitude</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="145453153002226">
+            <conditions>
+                <condition id="0" name="On function" sid="126526748750386" type="Function">
+                    <param id="0" name="Name">&quot;ResetMagnitudes&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="996421398220288" type="BridgeBit">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="307498084245337" type="BridgeBit">
+                    <param id="0" name="Instance variable">TargetMagnitude</param>
+                    <param id="1" name="Value">BridgeBit.StartingMagnitude</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="156814101349818">
+            <conditions>
+                <condition id="0" name="On function" sid="938838825569631" type="Function">
+                    <param id="0" name="Name">&quot;UpdateMagnitudes&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="723395177262199" type="BridgeBit">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="979334310444509" type="BridgeBit">
+                    <param id="0" name="Instance variable">TargetMagnitude</param>
+                    <param id="1" name="Value">Function.Param(1) * BridgeBit.StartingMagnitude</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="167210096927934">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="290811216241403" type="System">
+                    <param id="0" name="First value">abs(BridgeBit.Movement.Magnitude - BridgeBit.TargetMagnitude)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Movement" id="2" name="Set magnitude" sid="729338614927651" type="BridgeBit">
+                    <param id="0" name="Magnitude">lerp(BridgeBit.Movement.Magnitude, BridgeBit.TargetMagnitude, dt)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
