@@ -108,7 +108,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\jamba\Textures\TiledBackground.png" />
         </object-type>
-        <object-type name="Door" sid="808490603696994">
+        <object-type name="ExitDoor" sid="808490603696994">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245857897955300" speed="5">

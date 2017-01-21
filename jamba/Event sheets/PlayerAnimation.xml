@@ -24,8 +24,8 @@
             </conditions>
             <actions>
                 <action id="-22" name="Set angle toward position" sid="869597301153735" type="Player">
-                    <param id="0" name="X">Door.X</param>
-                    <param id="1" name="Y">Door.Y</param>
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
                 </action>
             </actions>
         </event-block>

@@ -30,8 +30,8 @@
                     <param id="2" name="Tag">&quot;StartMoving&quot;</param>
                 </action>
                 <action behavior="Pathfinding" id="0" name="Find path" sid="912080108676068" type="Player">
-                    <param id="0" name="X">Door.X</param>
-                    <param id="1" name="Y">Door.Y</param>
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -68,8 +68,8 @@
             </conditions>
             <actions>
                 <action behavior="Pathfinding" id="0" name="Find path" sid="322358942533864" type="Player">
-                    <param id="0" name="X">Door.X</param>
-                    <param id="1" name="Y">Door.Y</param>
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
                 </action>
                 <action id="1" name="Append text" sid="901843826609019" type="Console">
                     <param id="0" name="Text">newline &amp; &quot;Failed to find path!&quot;</param>
@@ -88,8 +88,8 @@
             <actions>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="719527507642885" type="Player" />
                 <action id="-22" name="Set angle toward position" sid="562307886499979" type="Player">
-                    <param id="0" name="X">Door.X</param>
-                    <param id="1" name="Y">Door.Y</param>
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -125,7 +125,7 @@
         <event-block sid="521621353842803">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="627506055729947" type="Player">
-                    <param id="0" name="Object">Door</param>
+                    <param id="0" name="Object">ExitDoor</param>
                 </condition>
             </conditions>
             <actions>
