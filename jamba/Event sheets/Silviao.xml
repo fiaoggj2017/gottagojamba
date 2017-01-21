@@ -8,14 +8,11 @@
                 <condition id="-1" name="Every tick" sid="877364991004368" type="System" />
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="508002544518989" type="Timer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="0" name="Set text" sid="614350931740963" type="Timer">
+                <action id="0" name="Set text" sid="614350931740963" type="Stats">
                     <param id="0" name="Text">&quot;FPS: &quot; &amp; (1 / dt) &amp; newline &amp; &quot;Time: &quot; &amp; time</param>
                 </action>
                 <action id="-3" name="Create object" sid="741646931452110" type="System">
-                    <param id="0" name="Object to create">Sombra</param>
+                    <param id="0" name="Object to create">Trail</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">Silviao.X</param>
                     <param id="3" name="Y">Silviao.Y</param>
@@ -32,6 +29,10 @@
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;StartMoving&quot;</param>
                 </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="912080108676068" type="Silviao">
+                    <param id="0" name="X">Door.X</param>
+                    <param id="1" name="Y">Door.Y</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="768333899572459">
@@ -41,22 +42,64 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="126975149117233" type="Silviao">
-                    <param id="0" name="State">1</param>
+                <action id="-13" name="Set boolean" sid="565751958647408" type="Silviao">
+                    <param id="0" name="Instance variable">MoveEnabled</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="878163291999094">
+        <event-block sid="794971231807550">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="615892127581496" type="Silviao" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="580529644813966" type="Silviao">
+                    <param id="0" name="Instance variable">PathFound</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="1" name="Append text" sid="769679545267973" type="Console">
+                    <param id="0" name="Text">newline &amp; &quot;Path found!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="651014105238694">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="505266959918670" type="Silviao" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="322358942533864" type="Silviao">
+                    <param id="0" name="X">Door.X</param>
+                    <param id="1" name="Y">Door.Y</param>
+                </action>
+                <action id="1" name="Append text" sid="901843826609019" type="Console">
+                    <param id="0" name="Text">newline &amp; &quot;Failed to find path!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="557725416455119">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="473522560989441" type="Silviao">
+                    <param id="0" name="Instance variable">MoveEnabled</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="706855648320315" type="Silviao">
+                    <param id="0" name="Instance variable">PathFound</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="719527507642885" type="Silviao" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="878163291999094">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="847600085413833" type="Silviao">
-                    <param id="0" name="Object">Tia</param>
+                    <param id="0" name="Object">Obstacle</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="644773161678887" type="System" />
             </actions>
             <sub-events>
-                <event-block sid="428293654475224">
+                <event-block disabled="1" sid="428293654475224">
                     <conditions>
                         <condition id="-10" name="For" sid="899550786128866" type="System">
                             <param id="0" name="Name">&quot;i&quot;</param>
@@ -66,7 +109,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="876005868662674" type="System">
-                            <param id="0" name="Object to create">Marmita</param>
+                            <param id="0" name="Object to create">Lunch</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">Silviao.X + 10 * random(-5, 5)</param>
                             <param id="3" name="Y">Silviao.Y + 10 * random(-5, 5)</param>
@@ -77,13 +120,19 @@
         </event-block>
         <event-block sid="521621353842803">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="627506055729947" type="Silviao">
-                    <param id="0" name="Object">Porta</param>
+                <condition id="0" name="On collision with another object" sid="627506055729947" type="Silviao">
+                    <param id="0" name="Object">Door</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-45" name="Reset persisted objects" sid="500077276324260" type="System" />
-                <action id="-26" name="Restart layout" sid="557722442063599" type="System" />
+                <action id="1" name="Append text" sid="714354080200311" type="Console">
+                    <param id="0" name="Text">newline &amp; &quot;Reached door!&quot;</param>
+                </action>
+                <action disabled="1" id="-43" name="Go to next/previous layout" sid="557722442063599" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="500077276324260" type="Lunch" />
+                <action id="-26" name="Restart layout" sid="277508263705897" type="System" />
             </actions>
         </event-block>
     </events>

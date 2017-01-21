@@ -13,7 +13,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Sine" id="1" name="Set period" sid="359323335701570" type="Tia">
+                <action behavior="Sine" id="1" name="Set period" sid="359323335701570" type="Obstacle">
                     <param id="0" name="Period">4</param>
                 </action>
                 <action id="-9" name="Set value" sid="455819382763168" type="System">
@@ -39,7 +39,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Sine" id="1" name="Set period" sid="223055995942742" type="Tia">
+                        <action behavior="Sine" id="1" name="Set period" sid="223055995942742" type="Obstacle">
                             <param id="0" name="Period">(time - LastTimeButtonWasPressed) * 2</param>
                         </action>
                         <action id="-9" name="Set value" sid="506427394735194" type="System">
