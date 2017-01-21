@@ -233,7 +233,7 @@
         <object-type name="Text" sid="789509097541757">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="918738808636912">
+        <object-type name="Faxineira" sid="918738808636912">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="865847792567422" speed="10">
