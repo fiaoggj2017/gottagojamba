@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Input</name>
+    <events>
+        <variable constant="0" name="LastTimeButtonWasPressed" sid="987746628545508" static="0" type="number">0</variable>
+        <event-block sid="940950744436678">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="262239009658235" type="System">
+                    <param id="0" name="First value">time - LastTimeButtonWasPressed</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="1" name="Set period" sid="359323335701570" type="Tia">
+                    <param id="0" name="Period">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="455819382763168" type="System">
+                    <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="554653462079085">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="524054930435302" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="810371660546573">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="567473150918668" type="System">
+                            <param id="0" name="First value">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="1" name="Set period" sid="223055995942742" type="Tia">
+                            <param id="0" name="Period">(time - LastTimeButtonWasPressed) * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="506427394735194" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="770968853565479">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="677230101718905" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="911635624367354" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
