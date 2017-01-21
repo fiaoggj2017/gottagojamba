@@ -61,7 +61,12 @@
                                     <param id="0" name="Object">BridgeBit</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="182656062314961" type="Function">
+                                    <param id="0" name="Name">&quot;UpdateMagnitudes&quot;</param>
+                                    <param id="1" name="Parameter {n}">BridgeBit.UID{###}abs((Player.Sine.Period - 2 * (time - LastTimeButtonWasPressed)) / Player.Sine.Period)</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
