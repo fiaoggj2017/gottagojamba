@@ -11,6 +11,7 @@
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -53,6 +54,10 @@
     <object-folder>
         <object-type name="Obstacle" sid="790706888170211">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="StartingPeriod" sid="410966431075785" type="number" />
+                <instance-variable name="TargetPeriod" sid="277517688533981" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="452995523812481">
                     <behavior id="Sin" />
@@ -324,6 +329,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Function" sid="516909908883304">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -338,6 +346,7 @@
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
         <global-instance type="Browser" uid="3" />
+        <global-instance type="Function" uid="2" />
     </global-instances>
     <sounds-folder />
     <music-folder />
