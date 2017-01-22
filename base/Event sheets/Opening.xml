@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Opening</name>
+    <events>
+        <event-block sid="526487346536785">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="504897150426694" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="775768445995617" type="txtFloor">
+                    <param id="0" name="Text">&quot;No ano de 2017...&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="104026304261157" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="0" name="Set text" sid="964901924091357" type="txtFloor">
+                    <param id="0" name="Text">&quot;Era mais um dia comum no restaurante Jamba.&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="858793362781600" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="515468902732884" type="cutscene02">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="624584471923800" type="txtFloor">
+                    <param id="0" name="Text">&quot;Alô? Sim, uma marmita?&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="763697341362563" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="0" name="Set text" sid="284778593376301" type="txtFloor">
+                    <param id="0" name="Text">&quot;Prédio 5? Certeza que é 5? Achava que eram só 4&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="269375893842371" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="0" name="Set text" sid="305382911603873" type="txtFloor">
+                    <param id="0" name="Text">&quot;OK então,obrigada!&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="979020432061398" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="650086020042148" type="cutscene03">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="432454128152070" type="cutscene02">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="450269187212401" type="txtFloor">
+                    <param id="0" name="Text">&quot;Silvião, preciso que leve esta marmita para o Prédio 5&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="564987857653697" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="0" name="Set text" sid="323155103472598" type="txtFloor">
+                    <param id="0" name="Text">&quot;Show!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
