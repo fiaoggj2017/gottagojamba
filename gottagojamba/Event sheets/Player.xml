@@ -119,6 +119,10 @@
                     <param id="0" name="Name">PLAYER_DEAD_CALLBACK</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="-11" name="Add to" sid="856867150520735" type="PersistentData">
+                    <param id="0" name="Instance variable">Tries</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>

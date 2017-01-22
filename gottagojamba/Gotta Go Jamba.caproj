@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -56,6 +57,38 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-type name="HUDFloor" sid="127017701541383">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
+        </object-type>
+        <object-type name="Avatar" sid="944318318944509">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="516777430610827">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="414473464326792" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Paulo\Desktop\GGJ17\Silviao_portrait2.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HUDTries" sid="984502872602059">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
+        </object-type>
         <object-type name="ExitDoor" sid="808490603696994">
             <plugin id="Sprite" />
             <animation-folder>
@@ -579,6 +612,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PersistentData" sid="223553032064349">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Tries" sid="288131195984411" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="544770155935908">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="935053292922881" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -600,10 +649,11 @@
         <event-sheet>ElevatorLevel EventSheet.xml</event-sheet>
         <event-sheet>ElevatorLevel Input.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>HUD Setup.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="46" />
-        <global-instance type="Function" uid="47" />
+        <global-instance type="Keyboard" uid="47" />
+        <global-instance type="Function" uid="50" />
     </global-instances>
     <sounds-folder />
     <music-folder />

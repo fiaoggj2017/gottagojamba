@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="DROPPED" sid="991704426861610" static="0" type="number">0</variable>
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
-        <include>BridgeLevel DebugConsole</include>
+        <include>HUD Setup</include>
         <include>ElevatorLevel Temperature</include>
         <include>ElevatorLevel Input</include>
         <include>PlayerAnimation</include>
@@ -65,6 +65,10 @@
                 <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Call function" sid="270618428122243" type="Function">
+                    <param id="0" name="Name">&quot;SetupHUD&quot;</param>
+                    <param id="1" name="Parameter {n}">2</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
                     <param id="0" name="Pin to">Elevador</param>
                     <param id="1" name="Mode">0</param>

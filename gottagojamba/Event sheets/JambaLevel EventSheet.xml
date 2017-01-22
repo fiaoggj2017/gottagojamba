@@ -3,10 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>JambaLevel EventSheet</name>
     <events>
+        <include>HUD Setup</include>
         <include>PlayerAnimation</include>
         <include>JambaLevel ObstacleAnimation</include>
         <include>JambaLevel Player</include>
         <include>Input</include>
+        <event-block sid="236185352417074">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="520926529853652" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="592515694621473" type="Function">
+                    <param id="0" name="Name">&quot;SetupHUD&quot;</param>
+                    <param id="1" name="Parameter {n}">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="186635716114816">
             <conditions>
                 <condition id="0" name="On function" sid="631699537933929" type="Function">
