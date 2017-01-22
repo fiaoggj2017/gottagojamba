@@ -10,6 +10,7 @@
     <unique-id>1bnhv1xbpa1eg</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -256,6 +257,9 @@
         </object-type>
         <object-type name="Tiles" sid="932704964647534">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Temperature" sid="945372935926534" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="961843809517988">
                     <behavior id="Pin" />
@@ -333,6 +337,31 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Obstacle" sid="921610639193947">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Temperature" sid="849398934523279" type="number" />
+                <instance-variable name="StartingPeriod" sid="179087997897659" type="number" />
+                <instance-variable name="TargetPeriod" sid="326703916280433" type="number" />
+                <instance-variable name="StartingTemperature" sid="583534951491802" type="number" />
+                <instance-variable name="TargetTemperature" sid="874107910551624" type="number" />
+                <instance-variable name="StartingMagnitude" sid="692400372202610" type="number" />
+                <instance-variable name="TargetMagnitude" sid="770004736969227" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="997857303049082">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="379759661000774" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\vruzeda\Downloads\Pasted image at 2017_01_21 07_56 PM.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="540991158923140">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -346,6 +375,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Function" uid="11" />
     </global-instances>
     <sounds-folder />
     <music-folder />
