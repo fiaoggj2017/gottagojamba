@@ -651,7 +651,7 @@
         <event-sheet>HUD Setup.xml</event-sheet>
         <event-sheet>Common Player.xml</event-sheet>
         <event-sheet>Common PlayerWithMovement.xml</event-sheet>
-        <event-sheet>ElevatorLever Player.xml</event-sheet>
+        <event-sheet>ElevatorLevel Player.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="47" />
