@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BridgeLevel Player</name>
     <events>
-        <include>Common PlayerWithMovement</include>
         <event-block sid="713395397497827">
             <conditions>
                 <condition id="-1" name="Every tick" sid="931953217909884" type="System" />
@@ -55,5 +54,6 @@
                 <action id="-26" name="Restart layout" sid="930226919163202" type="System" />
             </actions>
         </event-block>
+        <include>Common PlayerWithMovement</include>
     </events>
 </c2eventsheet>
