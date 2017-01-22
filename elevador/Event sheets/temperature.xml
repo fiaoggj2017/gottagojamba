@@ -46,8 +46,8 @@
                     <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
                     <param id="1" name="Value">10 * aux</param>
                 </action>
-                <action id="0" name="Set text" sid="956163786732625" type="Text2">
-                    <param id="0" name="Text">&quot;FLOOR_TEMPERATURE &quot; &amp; FLOOR_TEMPERATURE &amp; newline &amp; &quot;PLAYER_TEMPERATURE &quot;&amp; PLAYER_TEMPERATURE &amp; newline &amp; &quot;DIFFERENCE &quot; &amp; abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE) &amp; newline &amp; &quot;INTERVAL &quot; &amp; INTERVAL</param>
+                <action id="0" name="Set text" sid="956163786732625" type="Console">
+                    <param id="0" name="Text">&quot;FLOOR_TEMPERATURE &quot; &amp; FLOOR_TEMPERATURE &amp; newline &amp; &quot;PLAYER_TEMPERATURE &quot;&amp; PLAYER_TEMPERATURE &amp; newline &amp; &quot;DIFFERENCE &quot; &amp; abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE) &amp; newline &amp; &quot;INTERVAL &quot; &amp; INTERVAL &amp; newline &amp; &quot;MARMITAS NO CHÃO &quot; &amp; DROPPED</param>
                 </action>
             </actions>
             <sub-events>
@@ -60,17 +60,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set effect parameter" sid="546686993905645" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="546686993905645" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">FLOOR_TEMPERATURE * 2</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="145162341978986" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="145162341978986" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">1</param>
                             <param id="2" name="Value">100 - (FLOOR_TEMPERATURE * 2)</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="700111705359431" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="700111705359431" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">2</param>
                             <param id="2" name="Value">0</param>
@@ -86,17 +86,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-28" name="Set effect parameter" sid="809062856730563" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="809062856730563" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">0</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="819083830252348" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="819083830252348" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">1</param>
                             <param id="2" name="Value">(FLOOR_TEMPERATURE * 2) + 100</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="742657980403192" type="tiles">
+                        <action id="-28" name="Set effect parameter" sid="742657980403192" type="Tiles">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">2</param>
                             <param id="2" name="Value">FLOOR_TEMPERATURE * -2</param>

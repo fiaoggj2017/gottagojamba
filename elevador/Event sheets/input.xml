@@ -9,7 +9,7 @@
                 <condition id="0" name="On key pressed" sid="411333219145543" type="Keyboard">
                     <param id="0" name="Key">32 (Space)</param>
                 </condition>
-                <condition id="-1" name="Compare X" sid="110814408168307" type="indicator">
+                <condition id="-1" name="Compare X" sid="110814408168307" type="Indicator">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="X co-ordinate">temperatureBar.X + temperatureBar.Width / 2</param>
                 </condition>
@@ -20,7 +20,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="652115193727383" type="indicator">
+                <action id="-1" name="Set X" sid="652115193727383" type="Indicator">
                     <param id="0" name="X">indicator.X + (temperatureBar.Width / 10)</param>
                 </action>
                 <action id="-10" name="Add to" sid="774902862991048" type="System">
@@ -34,13 +34,13 @@
                 <condition id="-6" name="Every X seconds" sid="303127905348820" type="System">
                     <param id="0" name="Interval (seconds)">INTERVAL</param>
                 </condition>
-                <condition id="-1" name="Compare X" sid="590009182242289" type="indicator">
+                <condition id="-1" name="Compare X" sid="590009182242289" type="Indicator">
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="X co-ordinate">temperatureBar.X - temperatureBar.Width / 2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="172945817078346" type="indicator">
+                <action id="-1" name="Set X" sid="172945817078346" type="Indicator">
                     <param id="0" name="X">indicator.X - (temperatureBar.Width / 10)</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="191963278970215" type="System">
@@ -51,13 +51,13 @@
         </event-block>
         <event-block sid="771844430357981">
             <conditions>
-                <condition id="-1" name="Compare X" sid="510975511939535" type="indicator">
+                <condition id="-1" name="Compare X" sid="510975511939535" type="Indicator">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="X co-ordinate">temperatureBar.X - temperatureBar.Width/2</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-1" name="Set X" sid="919594879212143" type="indicator">
+                <action id="-1" name="Set X" sid="919594879212143" type="Indicator">
                     <param id="0" name="X">temperatureBar.X - temperatureBar.Width / 2</param>
                 </action>
             </actions>

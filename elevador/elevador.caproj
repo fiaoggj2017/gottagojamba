@@ -15,11 +15,13 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -50,7 +52,7 @@
         <object-type name="Keyboard" sid="412604954917302">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="elevador" sid="581917204016386">
+        <object-type name="Elevador" sid="581917204016386">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="start_x" sid="957612536638618" type="number" />
@@ -252,7 +254,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="tiles" sid="932704964647534">
+        <object-type name="Tiles" sid="932704964647534">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="961843809517988">
@@ -270,7 +272,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="temperatureBar" sid="164719626483482">
+        <object-type name="TemperatureBar" sid="164719626483482">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="449122009973525">
@@ -283,7 +285,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="indicator" sid="177725414055791">
+        <object-type name="Indicator" sid="177725414055791">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="603856049562438">
@@ -296,11 +298,37 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="802767627813429">
+        <object-type name="Console" sid="301292975524058">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text2" sid="301292975524058">
-            <plugin id="Text" />
+        <object-type name="Lunch" sid="152532621827237">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="818534715013804">
+                    <behavior id="Persist" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="961532648343102">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319177738498405" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="259220698875361">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Vignette">
+                    <effect id="vignette" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662354286337836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -309,7 +337,7 @@
     </layout-folder>
     <event-folder>
         <event-sheet>temperature.xml</event-sheet>
-        <event-sheet>start layout.xml</event-sheet>
+        <event-sheet>layout start-end.xml</event-sheet>
         <event-sheet>MAIN.xml</event-sheet>
         <event-sheet>input.xml</event-sheet>
     </event-folder>
