@@ -260,6 +260,9 @@
                 <behavior-type name="Pin" sid="961843809517988">
                     <behavior id="Pin" />
                 </behavior-type>
+                <behavior-type name="Sine" sid="512623516830531">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <effects>
                 <effect-type name="Tint">
