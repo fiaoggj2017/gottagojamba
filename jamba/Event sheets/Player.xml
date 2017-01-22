@@ -8,9 +8,6 @@
                 <condition id="-1" name="Every tick" sid="877364991004368" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="614350931740963" type="Stats">
-                    <param id="0" name="Text">&quot;FPS: &quot; &amp; (1 / dt) &amp; newline &amp; &quot;Time: &quot; &amp; time</param>
-                </action>
                 <action disabled="1" id="-3" name="Create object" sid="741646931452110" type="System">
                     <param id="0" name="Object to create">Trail</param>
                     <param id="1" name="Layer">0</param>
@@ -57,9 +54,6 @@
                     <param id="0" name="Instance variable">PathFound</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="1" name="Append text" sid="769679545267973" type="Console">
-                    <param id="0" name="Text">newline &amp; &quot;Path found!&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="651014105238694">
@@ -70,9 +64,6 @@
                 <action behavior="Pathfinding" id="0" name="Find path" sid="322358942533864" type="Player">
                     <param id="0" name="X">ExitDoor.X</param>
                     <param id="1" name="Y">ExitDoor.Y</param>
-                </action>
-                <action id="1" name="Append text" sid="901843826609019" type="Console">
-                    <param id="0" name="Text">newline &amp; &quot;Failed to find path!&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -129,9 +120,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="1" name="Append text" sid="714354080200311" type="Console">
-                    <param id="0" name="Text">newline &amp; &quot;Reached door!&quot;</param>
-                </action>
                 <action disabled="1" id="-43" name="Go to next/previous layout" sid="557722442063599" type="System">
                     <param id="0" name="Which">0</param>
                 </action>

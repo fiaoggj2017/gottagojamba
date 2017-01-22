@@ -10,11 +10,9 @@
     <unique-id>2pfhbuse19phf</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -65,23 +63,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534873327359492" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\vruzeda\Downloads\Pasted image at 2017_01_21 07_56 PM.png" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Keyboard" sid="315625276658010">
             <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Console" sid="747013224026323">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Persist" sid="161672102399547">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="Browser" sid="877259452535762">
-            <plugin id="Browser" />
         </object-type>
         <object-type name="Trail" sid="259233337721024">
             <plugin id="Sprite" />
@@ -134,9 +121,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Stats" sid="655116816625855">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Player" sid="117990735216178">
             <plugin id="Sprite" />
             <instance-variables>
@@ -160,9 +144,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="PlayerAngle" sid="254561814040325">
-            <plugin id="Text" />
         </object-type>
         <object-type name="PlayerAnimation" sid="511118302991723">
             <plugin id="Sprite" />
@@ -332,6 +313,56 @@
         <object-type name="Function" sid="516909908883304">
             <plugin id="Function" />
         </object-type>
+        <object-type name="ObstacleAnimation" sid="768482233204908">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="386498405752796">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="runRight" pingpong="1" repeatcount="1" repeatto="0" sid="982020821775644" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="runLeft" pingpong="1" repeatcount="1" repeatto="0" sid="561131015729230" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -342,10 +373,10 @@
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>Input.xml</event-sheet>
         <event-sheet>PlayerAnimation.xml</event-sheet>
+        <event-sheet>ObstacleAnimation.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
-        <global-instance type="Browser" uid="3" />
         <global-instance type="Function" uid="2" />
     </global-instances>
     <sounds-folder />

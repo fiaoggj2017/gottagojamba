@@ -4,6 +4,7 @@
     <name>Event sheet 1</name>
     <events>
         <include>PlayerAnimation</include>
+        <include>ObstacleAnimation</include>
         <include>Player</include>
         <include>Input</include>
     </events>
