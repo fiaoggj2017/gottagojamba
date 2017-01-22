@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
+        <include>Lunch</include>
         <event-block sid="191017385502763">
             <conditions>
                 <condition id="-18" name="On created" sid="735036614284035" type="Player" />
@@ -81,7 +82,7 @@
                 <action id="-26" name="Restart layout" sid="344043349191402" type="System" />
             </actions>
         </event-block>
-        <event-block disabled="1" sid="997493374105881">
+        <event-block sid="997493374105881">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="317962436576237" type="Player">
                     <param id="0" name="Instance variable">MoveEnabled</param>
@@ -98,23 +99,58 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="971181136457175">
+        <event-block sid="695391931494950">
             <conditions>
-                <condition id="-11" name="For Each" sid="879901744577755" type="System">
-                    <param id="0" name="Object">BridgeBit</param>
-                </condition>
+                <condition id="-1" name="Every tick" sid="192579459163629" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-13" name="Set boolean" sid="940795141157539" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="556060658048368">
+                <event-block any="1" sid="971181136457175">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="418130148356801" type="Player">
+                        <condition id="-36" name="Pick overlapping point" sid="418130148356801" type="System">
                             <param id="0" name="Object">BridgeBit</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </condition>
+                        <condition id="-36" name="Pick overlapping point" sid="315255955575630" type="System">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="475766854911342" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="532575236543642">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="704376973911177" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="723190377295084" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Silviao is DEDBIF&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="604063225193363" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                    <param id="1" name="Parameter {n}">5{###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Scenario&quot;</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="930226919163202" type="System">
+                    <param id="0" name="Layout">&quot;BridgeLayout&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
