@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Lunch</name>
+    <name>BridgeLevel LunchManagement</name>
     <events>
         <event-block sid="487047371682739">
             <conditions>

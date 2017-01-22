@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BridgeLevel EventSheet</name>
+    <events>
+        <include>BridgeLevel LunchManagement</include>
+        <include>BridgeLevel DebugConsole</include>
+        <include>BridgeLevel Input</include>
+        <include>BridgeLevel Player</include>
+        <include>BridgeLevel PlayerAnimation</include>
+        <event-block sid="670718174002595">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="510423811880108" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="130994995114370">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="482496192139351" type="System">
+                            <param id="0" name="Object">Lunch</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="575489181703785" type="Function">
+                            <param id="0" name="Name">&quot;LunchSetup&quot;</param>
+                            <param id="1" name="Parameter {n}">Lunch.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

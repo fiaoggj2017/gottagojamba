@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BridgeLevel PlayerAnimation</name>
+    <events>
+        <event-block sid="672548117070222">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="175994218863479" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="987386872288893" type="PlayerAnimation">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="699402007876716" type="PlayerAnimation">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="531839949527993">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="313550142643699" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="924341252641548" type="Player">
+                    <param id="0" name="X">ExitDoor.X</param>
+                    <param id="1" name="Y">ExitDoor.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="980422610168323">
+            <conditions>
+                <condition behavior="Sine" id="0" name="Is active" sid="718700787956000" type="Player" />
+                <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="691081662719034" type="Player" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="767572207008420" type="PlayerAnimation">
+                    <param id="0" name="Animation">(floor(((Player.Angle + 45) % 360) / 90) = 0) ? &quot;runRight&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="282673270103161" type="PlayerAnimation">
+                    <param id="0" name="Animation">(floor(((Player.Angle + 45) % 360) / 90) = 1) ? &quot;runDown&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="864712192700942" type="PlayerAnimation">
+                    <param id="0" name="Animation">(floor(((Player.Angle + 45) % 360) / 90) = 2) ? &quot;runLeft&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="964508835124973" type="PlayerAnimation">
+                    <param id="0" name="Animation">(floor(((Player.Angle + 45) % 360) / 90) = 3) ? &quot;runUp&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
