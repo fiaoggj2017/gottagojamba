@@ -177,6 +177,9 @@
                 <instance-variable name="MoveEnabled" sid="802275444349180" type="boolean" />
                 <instance-variable name="PathFound" sid="283892924034425" type="boolean" />
                 <instance-variable name="Dead" sid="449946666387832" type="boolean" />
+                <instance-variable name="Temperature" sid="754971077989552" type="number" />
+                <instance-variable name="StartingTemperature" sid="447837472496739" type="number" />
+                <instance-variable name="TargetTemperature" sid="895350453236998" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="553640128254918">

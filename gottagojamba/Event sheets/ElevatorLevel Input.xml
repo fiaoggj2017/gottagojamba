@@ -3,178 +3,75 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ElevatorLevel Input</name>
     <events>
-        <variable constant="0" name="PLAYER_TEMPERATURE" sid="412797026514185" static="0" type="number">0</variable>
-        <variable constant="0" name="LastTimeButtonWasPressed3" sid="306353409297582" static="0" type="number">0</variable>
-        <event-block sid="315475991296516">
+        <variable constant="1" name="MAX_FREQUENCY" sid="947098981026361" static="0" type="number">4</variable>
+        <variable constant="1" name="MIN_FREQUENCY" sid="723048080944811" static="0" type="number">0</variable>
+        <variable constant="1" name="MAX_TEMPERATURE" sid="469858448693877" static="0" type="number">50</variable>
+        <variable constant="1" name="MIN_TEMPERATURE" sid="129155939676715" static="0" type="number">-50</variable>
+        <event-block sid="733307396065239">
             <conditions>
-                <condition id="-18" name="On created" sid="697538112928681" type="Obstacle" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="402873423667888" type="Function">
-                    <param id="0" name="Name">&quot;StoreSineParameters&quot;</param>
-                    <param id="1" name="Parameter {n}">Obstacle.UID</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="190481815880043">
-            <conditions>
-                <condition id="-8" name="Compare two values" sid="918820779796511" type="System">
-                    <param id="0" name="First value">time - LastTimeButtonWasPressed</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">1</param>
-                </condition>
-                <condition id="-11" name="For Each" sid="800836942577552" type="System">
-                    <param id="0" name="Object">Obstacle</param>
+                <condition id="0" name="On function" sid="254489554274113" type="Function">
+                    <param id="0" name="Name">&quot;DoStoreParameters&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Call function" sid="345732245318475" type="Function">
-                    <param id="0" name="Name">&quot;ResetSineParameters&quot;</param>
-                    <param id="1" name="Parameter {n}">Obstacle.UID</param>
+                <action id="-10" name="Set value" sid="726982847102771" type="Player">
+                    <param id="0" name="Instance variable">StartingTemperature</param>
+                    <param id="1" name="Value">-50</param>
                 </action>
-                <action id="-9" name="Set value" sid="281120969864329" type="System">
-                    <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                <action id="-10" name="Set value" sid="161166739000129" type="Player">
+                    <param id="0" name="Instance variable">Temperature</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="510341718364771">
+        <event-block sid="864661256929688">
             <conditions>
-                <condition id="0" name="On key pressed" sid="975734044831510" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="447060658100645">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="626548291364511" type="System">
-                            <param id="0" name="First value">LastTimeButtonWasPressed</param>
-                            <param id="1" name="Comparison">1</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-11" name="For Each" sid="721649162666168" type="System">
-                            <param id="0" name="Object">Obstacle</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="773897236031146" type="Function">
-                            <param id="0" name="Name">&quot;UpdateSineParameters&quot;</param>
-                            <param id="1" name="Parameter {n}">Obstacle.UID{###}Obstacle.Sine.Period{###}(time - LastTimeButtonWasPressed) * 2{###}Obstacle.Sine.Magnitude</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="327183414131837">
-                    <conditions />
-                    <actions>
-                        <action id="-9" name="Set value" sid="619457161153950" type="System">
-                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
-                            <param id="1" name="Value">time</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="533324700144737">
-            <conditions>
-                <condition id="0" name="On function" sid="766380196822196" type="Function">
-                    <param id="0" name="Name">&quot;StoreSineParameters&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="841855257559271" type="Obstacle">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                <condition id="0" name="On function" sid="263909531158009" type="Function">
+                    <param id="0" name="Name">&quot;DoResetParameters&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="688298869491482" type="Obstacle">
-                    <param id="0" name="Instance variable">StartingPeriod</param>
-                    <param id="1" name="Value">Obstacle.Sine.Period</param>
-                </action>
-                <action id="-10" name="Set value" sid="370271864605598" type="Obstacle">
-                    <param id="0" name="Instance variable">StartingTemperature</param>
-                    <param id="1" name="Value">Obstacle.Temperature</param>
-                </action>
-                <action id="-10" name="Set value" sid="128414818177240" type="Obstacle">
-                    <param id="0" name="Instance variable">StartingMagnitude</param>
-                    <param id="1" name="Value">Obstacle.Sine.Magnitude</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="963257011482055">
-            <conditions>
-                <condition id="0" name="On function" sid="166052344809776" type="Function">
-                    <param id="0" name="Name">&quot;ResetSineParameters&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="722814394208944" type="Obstacle">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="671139107490020" type="Obstacle">
-                    <param id="0" name="Instance variable">TargetPeriod</param>
-                    <param id="1" name="Value">Obstacle.StartingPeriod</param>
-                </action>
-                <action id="-10" name="Set value" sid="765943101825080" type="Obstacle">
+                <action id="-10" name="Set value" sid="247075594132381" type="Player">
                     <param id="0" name="Instance variable">TargetTemperature</param>
-                    <param id="1" name="Value">Obstacle.StartingTemperature</param>
-                </action>
-                <action id="-10" name="Set value" sid="876388802463981" type="Obstacle">
-                    <param id="0" name="Instance variable">TargetMagnitude</param>
-                    <param id="1" name="Value">Obstacle.StartingMagnitude</param>
+                    <param id="1" name="Value">Player.StartingTemperature</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="432600774663683">
+        <event-block sid="755205232405493">
             <conditions>
-                <condition id="0" name="On function" sid="832612858518878" type="Function">
-                    <param id="0" name="Name">&quot;UpdateSineParameters&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="445838322325175" type="Obstacle">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                <condition id="0" name="On function" sid="761821755545911" type="Function">
+                    <param id="0" name="Name">&quot;DoUpdateParameters&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="863134894550582" type="Obstacle">
-                    <param id="0" name="Instance variable">TargetPeriod</param>
-                    <param id="1" name="Value">Function.Param(1)</param>
-                </action>
-                <action id="-10" name="Set value" sid="746752228678524" type="Obstacle">
+                <action id="-10" name="Set value" sid="111842454494127" type="Player">
                     <param id="0" name="Instance variable">TargetTemperature</param>
-                    <param id="1" name="Value">Function.Param(2)</param>
-                </action>
-                <action id="-10" name="Set value" sid="124627441687280" type="Obstacle">
-                    <param id="0" name="Instance variable">TargetMagnitude</param>
-                    <param id="1" name="Value">Function.Param(3)</param>
+                    <param id="1" name="Value">clamp(MIN_TEMPERATURE + (MAX_TEMPERATURE - MIN_TEMPERATURE) * ((1 / (2 * Function.Param(0))) - MIN_FREQUENCY) / (MAX_FREQUENCY - MIN_FREQUENCY), MIN_TEMPERATURE, MAX_TEMPERATURE)</param>
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="351578215315594">
+        <event-block sid="501231444732044">
             <conditions>
-                <condition id="-8" name="Compare two values" sid="576923948890282" type="System">
-                    <param id="0" name="First value">abs(Obstacle.Sine.Period - Obstacle.TargetPeriod)</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">0.01</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="621319462530821" type="System">
-                    <param id="0" name="First value">abs(Obstacle.Temperature - Obstacle.TargetTemperature)</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">0.01</param>
-                </condition>
-                <condition id="-8" name="Compare two values" sid="861498673947032" type="System">
-                    <param id="0" name="First value">abs(Obstacle.Sine.Magnitude - Obstacle.TargetMagnitude)</param>
+                <condition id="-8" name="Compare two values" sid="656740216872816" type="System">
+                    <param id="0" name="First value">abs(Player.Temperature - Player.TargetTemperature)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">0.01</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Sine" id="1" name="Set period" sid="562517980263072" type="Obstacle">
-                    <param id="0" name="Period">lerp(Obstacle.Sine.Period, Obstacle.TargetPeriod, dt)</param>
-                </action>
-                <action id="-10" name="Set value" sid="220914033641449" type="Obstacle">
+                <action id="-10" name="Set value" sid="741583091355676" type="Player">
                     <param id="0" name="Instance variable">Temperature</param>
-                    <param id="1" name="Value">lerp(Obstacle.Temperature, Obstacle.TargetTemperature, dt)</param>
+                    <param id="1" name="Value">lerp(Player.Temperature, Player.TargetTemperature, dt)</param>
                 </action>
-                <action behavior="Sine" id="2" name="Set magnitude" sid="269130993623042" type="Obstacle">
-                    <param id="0" name="Magnitude">lerp(Obstacle.Sine.Magnitude, Obstacle.TargetMagnitude, dt)</param>
+            </actions>
+        </event-block>
+        <event-block sid="657880660099514">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="210954409827324" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="203864188139620" type="Indicator">
+                    <param id="0" name="X">TemperatureBar.X - TemperatureBar.Width / 2 + TemperatureBar.Width * (Player.Temperature - MIN_TEMPERATURE) / (MAX_TEMPERATURE - MIN_TEMPERATURE)</param>
                 </action>
             </actions>
         </event-block>

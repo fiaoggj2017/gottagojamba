@@ -664,6 +664,9 @@
                         <MoveEnabled>false</MoveEnabled>
                         <PathFound>false</PathFound>
                         <Dead>false</Dead>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
