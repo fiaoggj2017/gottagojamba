@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EndScene EventSheet</name>
     <events>
-        <include>PlayerAnimation</include>
+        <event-block sid="554918887533318">
+            <conditions />
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>
