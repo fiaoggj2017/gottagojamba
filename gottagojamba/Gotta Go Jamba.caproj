@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -23,7 +24,10 @@
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+        <effect author="Brad Larson" id="vignette">Vignette</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -50,78 +54,25 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Obstacle" sid="790706888170211">
+        <object-type name="Elevador" sid="581917204016386">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="StartingPeriod" sid="410966431075785" type="number" />
-                <instance-variable name="TargetPeriod" sid="277517688533981" type="number" />
-                <instance-variable name="StartingMagnitude" sid="410966431075786" type="number" />
-                <instance-variable name="TargetMagnitude" sid="410966431075787" type="number" />
+                <instance-variable name="start_x" sid="957612536638618" type="number" />
+                <instance-variable name="start_y" sid="967837078830935" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Sine" sid="452995523812481">
+                <behavior-type name="Sine" sid="958202486586341">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534873327359492" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\vruzeda\Downloads\Pasted image at 2017_01_21 07_56 PM.png" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="638637780319573" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
         <object-type name="Keyboard" sid="315625276658010">
             <plugin id="Keyboard" />
-        </object-type>
-        <object-type name="Trail" sid="259233337721024">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Persist" sid="459353730608551">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215952327534079" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Lunch" sid="932006857008762">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Persist" sid="818885005800747">
-                    <behavior id="Persist" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568761814451924" speed="5">
-                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TiledBackground" sid="529875978527172">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\assets\Lobby.png" />
-        </object-type>
-        <object-type name="ExitDoor" sid="808490603696994">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245857897955300" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Wall" sid="459861493599636">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="499551188039709">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344803447275547" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="Player" sid="117990735216178">
             <plugin id="Sprite" />
@@ -312,8 +263,150 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Obstacle" sid="790706888170211">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Temperature" sid="849398934523279" type="number" />
+                <instance-variable name="StartingTemperature" sid="583534951491802" type="number" />
+                <instance-variable name="TargetTemperature" sid="874107910551624" type="number" />
+                <instance-variable name="StartingPeriod" sid="410966431075785" type="number" />
+                <instance-variable name="TargetPeriod" sid="277517688533981" type="number" />
+                <instance-variable name="StartingMagnitude" sid="410966431075786" type="number" />
+                <instance-variable name="TargetMagnitude" sid="410966431075787" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="452995523812481">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="534873327359492" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\vruzeda\Downloads\Pasted image at 2017_01_21 07_56 PM.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tiles" sid="932704964647534">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Temperature" sid="945372935926534" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="961843809517988">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="512623516830531">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="441846916043278" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TemperatureBar" sid="164719626483482">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="449122009973525">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436818321398726" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Indicator" sid="177725414055791">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="603856049562438">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197024467121259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.2" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Console" sid="301292975524058">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Trail" sid="259233337721024">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="459353730608551">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215952327534079" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lunch" sid="932006857008762">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="818885005800747">
+                    <behavior id="Persist" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="961532648343102">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319177738498405" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="259220698875361">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Vignette">
+                    <effect id="vignette" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662354286337836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Function" sid="516909908883304">
             <plugin id="Function" />
+        </object-type>
+        <object-type name="TiledBackground" sid="529875978527172">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\assets\Lobby.png" />
+        </object-type>
+        <object-type name="ExitDoor" sid="808490603696994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="245857897955300" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall" sid="459861493599636">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="499551188039709">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344803447275547" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
         <object-type name="ObstacleAnimation" sid="768482233204908">
             <plugin id="Sprite" />
@@ -369,6 +462,7 @@
     <families />
     <layout-folder>
         <layout>JambaLevel.xml</layout>
+        <layout>ElevatorLevel.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>JambaLevel EventSheet.xml</event-sheet>
@@ -376,10 +470,14 @@
         <event-sheet>JambaLevel Input.xml</event-sheet>
         <event-sheet>JambaLevel PlayerAnimation.xml</event-sheet>
         <event-sheet>JambaLevel ObstacleAnimation.xml</event-sheet>
+        <event-sheet>ElevatorLevel Temperature.xml</event-sheet>
+        <event-sheet>ElevatorLevel layout start-end.xml</event-sheet>
+        <event-sheet>ElevatorLevel EventSheet.xml</event-sheet>
+        <event-sheet>ElevatorLevel Input.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1" />
-        <global-instance type="Function" uid="2" />
+        <global-instance type="Keyboard" uid="28" />
+        <global-instance type="Function" uid="29" />
     </global-instances>
     <sounds-folder />
     <music-folder />
