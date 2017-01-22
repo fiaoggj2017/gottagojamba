@@ -401,7 +401,7 @@
                 <instance type="Console" uid="26">
                     <properties>
                         <text></text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16,700,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
