@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BridgeLevel EventSheet</name>
     <events>
+        <include>HUD Setup</include>
         <include>BridgeLevel LunchManagement</include>
         <include>DebugConsole</include>
         <include>Input</include>
@@ -12,7 +13,12 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="510423811880108" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="499563699835815" type="Function">
+                    <param id="0" name="Name">&quot;SetupHUD&quot;</param>
+                    <param id="1" name="Parameter {n}">3</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="130994995114370">
                     <conditions>
