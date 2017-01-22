@@ -31,7 +31,7 @@
             <instances>
                 <instance type="TiledBackground" uid="7">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
                     <blend-mode>0</blend-mode>
@@ -591,38 +591,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Wall" uid="15">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>91</x>
-                        <y>273</y>
-                        <z>0</z>
-                        <width>472</width>
-                        <height>50</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ExitDoor" uid="20">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -630,8 +601,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>405</x>
-                        <y>78</y>
+                        <x>401</x>
+                        <y>0</y>
                         <z>0</z>
                         <width>50</width>
                         <height>100</height>
@@ -687,8 +658,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>400</x>
-                        <y>550</y>
+                        <x>401</x>
+                        <y>526</y>
                         <z>0</z>
                         <width>50</width>
                         <height>50</height>

@@ -100,7 +100,7 @@
         </object-type>
         <object-type name="TiledBackground" sid="529875978527172">
             <plugin id="TiledBg" />
-            <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\jamba\Textures\TiledBackground.png" />
+            <texture original-source="C:\Users\vruzeda\Development\workspace\fiaoggj2017\gottagojamba\assets\Lobby.png" />
         </object-type>
         <object-type name="ExitDoor" sid="808490603696994">
             <plugin id="Sprite" />
