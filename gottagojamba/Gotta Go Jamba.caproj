@@ -680,8 +680,8 @@
         <event-sheet>Opening.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="47" />
-        <global-instance type="Function" uid="50" />
+        <global-instance type="Keyboard" uid="59" />
+        <global-instance type="Function" uid="60" />
     </global-instances>
     <sounds-folder />
     <music-folder />

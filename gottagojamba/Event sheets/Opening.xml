@@ -56,6 +56,9 @@
                 <action id="0" name="Set text" sid="323155103472598" type="HUDFloor">
                     <param id="0" name="Text">&quot;Show!&quot;</param>
                 </action>
+                <action id="-43" name="Go to next/previous layout" sid="190770385896940" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
