@@ -368,14 +368,14 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>JambaLevel.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Player.xml</event-sheet>
-        <event-sheet>Input.xml</event-sheet>
-        <event-sheet>PlayerAnimation.xml</event-sheet>
-        <event-sheet>ObstacleAnimation.xml</event-sheet>
+        <event-sheet>JambaLevel EventSheet.xml</event-sheet>
+        <event-sheet>JambaLevel Player.xml</event-sheet>
+        <event-sheet>JambaLevel Input.xml</event-sheet>
+        <event-sheet>JambaLevel PlayerAnimation.xml</event-sheet>
+        <event-sheet>JambaLevel ObstacleAnimation.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
