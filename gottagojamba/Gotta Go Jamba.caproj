@@ -628,9 +628,34 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite2" sid="591738091963857">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="551704332771480" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Paulo\Desktop\GGJ17\cutscenes.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cutscene02" sid="573191540935067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="443416684065690" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Paulo\Desktop\GGJ17\cutscene_01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cutscene03" sid="812807917149445">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840102123010614" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Paulo\Desktop\GGJ17\cutscene_02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>Opening.xml</layout>
         <layout>JambaLevel.xml</layout>
         <layout>ElevatorLevel.xml</layout>
         <layout>BridgeLevel.xml</layout>
@@ -652,6 +677,7 @@
         <event-sheet>Common Player.xml</event-sheet>
         <event-sheet>Common PlayerWithMovement.xml</event-sheet>
         <event-sheet>ElevatorLevel Player.xml</event-sheet>
+        <event-sheet>Opening.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="47" />

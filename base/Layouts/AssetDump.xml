@@ -199,7 +199,7 @@
                     <properties>
                         <character-width>24</character-width>
                         <character-height>24</character-height>
-                        <character-set>abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&apos;:!?-()</character-set>
+                        <character-set>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&apos;:!?-()</character-set>
                         <text>Text</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>

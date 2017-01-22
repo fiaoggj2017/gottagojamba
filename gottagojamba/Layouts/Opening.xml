@@ -114,7 +114,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="txtFloor" uid="5">
+                <instance type="HUDFloor" uid="5">
                     <properties>
                         <character-width>16</character-width>
                         <character-height>16</character-height>
