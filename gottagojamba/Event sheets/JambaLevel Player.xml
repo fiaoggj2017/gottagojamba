@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>JambaLevel Player</name>
     <events>
-        <include>Player</include>
+        <include>Common PlayerWithMovement</include>
         <event-block sid="878163291999094">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="847600085413833" type="Player">
@@ -26,7 +26,7 @@
             <actions>
                 <action id="0" name="Call function" sid="482776913872212" type="Function">
                     <param id="0" name="Name">&quot;SpillLunch&quot;</param>
-                    <param id="1" name="Parameter {n}">5{###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Background&quot;</param>
+                    <param id="1" name="Parameter {n}">random(1,5){###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Background&quot;</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="834600706429763" type="System" />
             </actions>

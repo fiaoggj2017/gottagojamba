@@ -7,85 +7,100 @@
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
         <include>HUD Setup</include>
         <include>ElevatorLevel Temperature</include>
+        <include>Common DebugConsole</include>
+        <include>Common Input</include>
+        <include>Common Player</include>
+        <include>Common LunchManagement</include>
+        <include>Common PlayerAnimation</include>
         <include>ElevatorLevel Input</include>
-        <include>PlayerAnimation</include>
-        <include>Input</include>
-        <event-block sid="157962623095729">
+        <include>ElevatorLever Player</include>
+        <event-block sid="366986385563650">
             <conditions>
-                <condition id="-8" name="Compare two values" sid="233343376881396" type="System">
+                <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="442456413151799">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="174661822594138" type="System">
+                            <param id="0" name="Object">Lunch</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="330785670028295" type="Tiles">
+                            <param id="0" name="Unique ID">Lunch.PinToUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="102615109967284" type="Lunch">
+                            <param id="0" name="Layer">Tiles.LayerName</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="290751174651412" type="Lunch" />
+                        <action id="-1" name="Set X" sid="436662676320618" type="Lunch">
+                            <param id="0" name="X">Tiles.X + Lunch.PinToDX</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="988218123877449" type="Lunch">
+                            <param id="0" name="Y">Tiles.Y + Lunch.PinToDY</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="576533053792851" type="Lunch">
+                            <param id="0" name="Pin to">Tiles</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="687271907722416">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="337210693141941" type="System">
                     <param id="0" name="First value">time</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">10</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-43" name="Go to next/previous layout" sid="132594921053388" type="System">
+                <action id="-43" name="Go to next/previous layout" sid="342097524942923" type="System">
                     <param id="0" name="Which">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="471627281477156">
+        <event-block sid="284856349500457">
             <conditions>
-                <condition id="-22" name="Else" sid="253011636587136" type="System" />
-                <condition id="-8" name="Compare two values" sid="412636390181091" type="System">
-                    <param id="0" name="First value">abs(Tiles.Temperature - Player.Temperature)</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">VARIANCE</param>
+                <condition id="0" name="On function" sid="344874286992480" type="Function">
+                    <param id="0" name="Name">&quot;DoLunchPin&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="869637868534419" type="Lunch">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-36" name="Pick overlapping point" sid="531302016268603" type="System">
+                    <param id="0" name="Object">Tiles</param>
+                    <param id="1" name="X">Lunch.X</param>
+                    <param id="2" name="Y">Lunch.Y</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
-            </actions>
-            <sub-events>
-                <event-block sid="162559922735500">
-                    <conditions>
-                        <condition id="-10" name="For" sid="905142968626689" type="System">
-                            <param id="0" name="Name">&quot;i&quot;</param>
-                            <param id="1" name="Start index">1</param>
-                            <param id="2" name="End index">random(1, 5)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="509837993941670" type="System">
-                            <param id="0" name="Object to create">Lunch</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">Player.X + 10 * random(-5, 5)</param>
-                            <param id="3" name="Y">Player.Y + 10 * random(-5, 5)</param>
-                        </action>
-                        <action id="-10" name="Add to" sid="104670933045452" type="System">
-                            <param id="0" name="Variable">DROPPED</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="366986385563650">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="270618428122243" type="Function">
-                    <param id="0" name="Name">&quot;SetupHUD&quot;</param>
-                    <param id="1" name="Parameter {n}">2</param>
+                <action id="-26" name="Move to layer" sid="832229940681853" type="Lunch">
+                    <param id="0" name="Layer">Tiles.LayerName</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
-                    <param id="0" name="Pin to">Elevador</param>
+                <action id="-24" name="Move to top" sid="610614075051657" type="Lunch" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="753473341963803" type="Lunch">
+                    <param id="0" name="Pin to">Tiles</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="576533053792851" type="Lunch">
-                    <param id="0" name="Pin to">Elevador</param>
-                    <param id="1" name="Mode">0</param>
+                <action id="-10" name="Set value" sid="190003316525829" type="Lunch">
+                    <param id="0" name="Instance variable">PinToUID</param>
+                    <param id="1" name="Value">Tiles.UID</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="119665765390542">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="805468529731440" type="System" />
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="239649090521474" type="Lunch">
-                    <param id="0" name="X">Self.X - (Elevador.Sine.CyclePosition * Elevador.Sine.Magnitude * Elevador.Sine.Period)</param>
+                <action id="-10" name="Set value" sid="901132084378510" type="Lunch">
+                    <param id="0" name="Instance variable">PinToDX</param>
+                    <param id="1" name="Value">Lunch.X-Tiles.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="692051087549339" type="Lunch">
+                    <param id="0" name="Instance variable">PinToDY</param>
+                    <param id="1" name="Value">Lunch.Y-Tiles.Y</param>
                 </action>
             </actions>
         </event-block>

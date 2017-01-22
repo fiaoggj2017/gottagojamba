@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ElevatorLever Player</name>
+    <events>
+        <include>Common Player</include>
+        <event-block sid="920749377678865">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="982911225469437" type="System">
+                    <param id="0" name="First value">abs(Tiles.Temperature - Player.Temperature)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">VARIANCE</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="763464625619636" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="329913516819263">
+            <conditions>
+                <condition id="0" name="On function" sid="371234551550368" type="Function">
+                    <param id="0" name="Name">&quot;OnPlayerDead&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="562521941837999" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                    <param id="1" name="Parameter {n}">random(1,5){###}50{###}60{###}Player.X{###}Player.Y{###}&quot;player&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="848728152143746" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;SILVIAO IS SO DEDBIF&quot;</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="572614904827794" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

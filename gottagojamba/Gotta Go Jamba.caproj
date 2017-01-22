@@ -637,19 +637,21 @@
     </layout-folder>
     <event-folder>
         <event-sheet>BridgeLevel Player.xml</event-sheet>
-        <event-sheet>Input.xml</event-sheet>
+        <event-sheet>Common Input.xml</event-sheet>
         <event-sheet>BridgeLevel EventSheet.xml</event-sheet>
-        <event-sheet>DebugConsole.xml</event-sheet>
-        <event-sheet>BridgeLevel LunchManagement.xml</event-sheet>
+        <event-sheet>Common DebugConsole.xml</event-sheet>
+        <event-sheet>Common LunchManagement.xml</event-sheet>
         <event-sheet>JambaLevel EventSheet.xml</event-sheet>
         <event-sheet>JambaLevel Player.xml</event-sheet>
-        <event-sheet>PlayerAnimation.xml</event-sheet>
+        <event-sheet>Common PlayerAnimation.xml</event-sheet>
         <event-sheet>JambaLevel ObstacleAnimation.xml</event-sheet>
         <event-sheet>ElevatorLevel Temperature.xml</event-sheet>
         <event-sheet>ElevatorLevel EventSheet.xml</event-sheet>
         <event-sheet>ElevatorLevel Input.xml</event-sheet>
-        <event-sheet>Player.xml</event-sheet>
         <event-sheet>HUD Setup.xml</event-sheet>
+        <event-sheet>Common Player.xml</event-sheet>
+        <event-sheet>Common PlayerWithMovement.xml</event-sheet>
+        <event-sheet>ElevatorLever Player.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="47" />
