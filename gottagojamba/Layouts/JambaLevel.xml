@@ -738,7 +738,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Overlay" sid="981959274033558">
+        <layer name="HUD" sid="981959274033558">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

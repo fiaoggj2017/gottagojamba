@@ -45,18 +45,18 @@
             <sub-events>
                 <event-block sid="148303772932162">
                     <conditions>
-                        <condition id="-36" name="Pick overlapping point" sid="390792430780488" type="System">
+                        <condition disabled="1" id="-36" name="Pick overlapping point" sid="390792430780488" type="System">
                             <param id="0" name="Object">BridgeBit</param>
                             <param id="1" name="X">Lunch.X</param>
                             <param id="2" name="Y">Lunch.Y</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-26" name="Move to layer" sid="988109693473575" type="Lunch">
+                        <action disabled="1" id="-26" name="Move to layer" sid="988109693473575" type="Lunch">
                             <param id="0" name="Layer">BridgeBit.LayerName</param>
                         </action>
                         <action id="-24" name="Move to top" sid="782643490900528" type="Lunch" />
-                        <action behavior="Pin" id="0" name="Pin to object" sid="111542890749533" type="Lunch">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="111542890749533" type="Lunch">
                             <param id="0" name="Pin to">BridgeBit</param>
                             <param id="1" name="Mode">0</param>
                         </action>
@@ -94,12 +94,12 @@
                 <condition id="-14" name="Pick by unique ID" sid="774921810543019" type="Lunch">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
                 </condition>
-                <condition id="-14" name="Pick by unique ID" sid="339523275582224" type="BridgeBit">
+                <condition disabled="1" id="-14" name="Pick by unique ID" sid="339523275582224" type="BridgeBit">
                     <param id="0" name="Unique ID">Lunch.PinToUID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Move to layer" sid="771035778818904" type="Lunch">
+                <action disabled="1" id="-26" name="Move to layer" sid="771035778818904" type="Lunch">
                     <param id="0" name="Layer">BridgeBit.LayerName</param>
                 </action>
                 <action id="-24" name="Move to top" sid="999784090531536" type="Lunch" />
@@ -109,7 +109,7 @@
                 <action id="-2" name="Set Y" sid="254594218413318" type="Lunch">
                     <param id="0" name="Y">BridgeBit.Y + Lunch.PinToDY</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="479627880196535" type="Lunch">
+                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="479627880196535" type="Lunch">
                     <param id="0" name="Pin to">BridgeBit</param>
                     <param id="1" name="Mode">0</param>
                 </action>

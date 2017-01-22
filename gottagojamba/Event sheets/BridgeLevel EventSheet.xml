@@ -4,7 +4,7 @@
     <name>BridgeLevel EventSheet</name>
     <events>
         <include>BridgeLevel LunchManagement</include>
-        <include>BridgeLevel DebugConsole</include>
+        <include>DebugConsole</include>
         <include>Input</include>
         <include>BridgeLevel Player</include>
         <include>PlayerAnimation</include>

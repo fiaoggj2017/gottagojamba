@@ -5,7 +5,6 @@
     <events>
         <variable constant="0" name="DROPPED" sid="991704426861610" static="0" type="number">0</variable>
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
-        <include>ElevatorLevel layout start-end</include>
         <include>ElevatorLevel Temperature</include>
         <include>ElevatorLevel Input</include>
         <include>PlayerAnimation</include>
@@ -38,6 +37,10 @@
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="543238439385374" type="Player">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="457184870122023" type="Player">
+                            <param id="0" name="Instance variable">WaitingTimeInSeconds</param>
+                            <param id="1" name="Value">100000</param>
                         </action>
                         <action id="-27" name="Set effect enabled" sid="395417368285156" type="Tiles">
                             <param id="0" name="Mode">0</param>
@@ -104,6 +107,39 @@
             <actions>
                 <action id="-1" name="Set X" sid="808439422633074" type="Indicator">
                     <param id="0" name="X">TemperatureBar.X - TemperatureBar.Width / 2 + TemperatureBar.Width * Obstacle.Temperature</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="366986385563650">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="576533053792851" type="Lunch">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119665765390542">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="805468529731440" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="239649090521474" type="Lunch">
+                    <param id="0" name="X">Self.X - (Elevador.Sine.CyclePosition * Elevador.Sine.Magnitude * Elevador.Sine.Period)</param>
+                </action>
+                <action id="-9" name="Set value" sid="280995871488887" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="825311319868602" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
