@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>JambaLevel Player</name>
+    <events>
+        <include>Player</include>
+        <event-block sid="878163291999094">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="847600085413833" type="Player">
+                    <param id="0" name="Object">Obstacle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="141918670875233" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="455532255797487">
+            <conditions>
+                <condition id="0" name="On function" sid="379677745078007" type="Function">
+                    <param id="0" name="Name">&quot;OnPlayerDead&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="482776913872212" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                    <param id="1" name="Parameter {n}">5{###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Background&quot;</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="834600706429763" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

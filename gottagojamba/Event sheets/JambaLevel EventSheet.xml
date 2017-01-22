@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>JambaLevel EventSheet</name>
+    <events>
+        <include>PlayerAnimation</include>
+        <include>JambaLevel ObstacleAnimation</include>
+        <include>JambaLevel Player</include>
+        <include>Input</include>
+        <event-block sid="186635716114816">
+            <conditions>
+                <condition id="0" name="On function" sid="631699537933929" type="Function">
+                    <param id="0" name="Name">&quot;DoStoreParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="186858429795264">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="609079035932640" type="System">
+                            <param id="0" name="Object">Obstacle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="379955609687319" type="Obstacle">
+                            <param id="0" name="Instance variable">StartingPeriod</param>
+                            <param id="1" name="Value">Obstacle.Sine.Period</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="537245979938074">
+            <conditions>
+                <condition id="0" name="On function" sid="700122765361239" type="Function">
+                    <param id="0" name="Name">&quot;DoResetParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="711147718586240">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="962626345345881" type="System">
+                            <param id="0" name="Object">Obstacle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="180213591301487" type="Obstacle">
+                            <param id="0" name="Instance variable">TargetPeriod</param>
+                            <param id="1" name="Value">Obstacle.StartingPeriod</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="102728096737572">
+            <conditions>
+                <condition id="0" name="On function" sid="471998190184777" type="Function">
+                    <param id="0" name="Name">&quot;DoUpdateParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="435651644422865">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="691616472855624" type="System">
+                            <param id="0" name="Object">Obstacle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="408915004932625" type="Obstacle">
+                            <param id="0" name="Instance variable">TargetPeriod</param>
+                            <param id="1" name="Value">2 * Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="654572624822523">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="179355529918277" type="System">
+                    <param id="0" name="First value">abs(Obstacle.Sine.Period - Obstacle.TargetPeriod)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="1" name="Set period" sid="431448891300955" type="Obstacle">
+                    <param id="0" name="Period">lerp(Obstacle.Sine.Period, Obstacle.TargetPeriod, dt)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

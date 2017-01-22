@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DebugConsole</name>
+    <events>
+        <event-block sid="971790831414301">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="198969965587118" type="System" />
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="675578785490744" type="DebugConsole">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;Courier New&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="594413744954937" type="DebugConsole">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;#FFFFFF&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="345797387194007" type="DebugConsole">
+                    <param id="0" name="Property name">&quot;text-align&quot;</param>
+                    <param id="1" name="Value">&quot;top&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="485542898312274" type="DebugConsole">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;8&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="279698657859855" type="DebugConsole">
+                    <param id="0" name="Property name">&quot;background-color&quot;</param>
+                    <param id="1" name="Value">&quot;rgba(0, 0, 0, 0.35)&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="633833502471860" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Layout Start&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="269705696798844">
+            <conditions>
+                <condition id="0" name="On function" sid="774451404684159" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="888218565558413">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="825840749816670" type="DebugConsole">
+                            <param id="0" name="Instance variable">LastMessage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="880486390871372" type="DebugConsole">
+                            <param id="0" name="Instance variable">LastMessageCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="960260876482418" type="DebugConsole">
+                            <param id="0" name="Text">DebugConsole.LastCompleteText &amp; &quot;(&quot; &amp; DebugConsole.LastMessageCount &amp; &quot;)&quot; &amp; newline</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="190157708773480">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="717966459961695" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="530390071827786" type="DebugConsole">
+                            <param id="0" name="Instance variable">LastMessageCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="679581694147427" type="DebugConsole">
+                            <param id="0" name="Instance variable">LastMessage</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="502462650100864" type="DebugConsole">
+                            <param id="0" name="Text">DebugConsole.Text &amp; Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="334264637252771" type="DebugConsole">
+                            <param id="0" name="Instance variable">LastCompleteText</param>
+                            <param id="1" name="Value">DebugConsole.Text</param>
+                        </action>
+                        <action id="0" name="Set text" sid="303311142152437" type="DebugConsole">
+                            <param id="0" name="Text">DebugConsole.Text &amp; newline</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="799278839822970">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="519380718634971" type="Keyboard">
+                    <param id="0" name="Key">192 (Grave)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="170706149789317" type="DebugConsole">
+                    <param id="0" name="Instance variable">ConsoleVisible</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="319490475091989">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="232568027783352" type="DebugConsole">
+                            <param id="0" name="Instance variable">ConsoleVisible</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="325272991696152" type="DebugConsole">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="898228762484220">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="253043174373244" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="443231495377075" type="DebugConsole">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

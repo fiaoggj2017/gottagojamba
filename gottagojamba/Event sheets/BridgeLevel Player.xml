@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BridgeLevel Player</name>
+    <events>
+        <include>Player</include>
+        <event-block sid="713395397497827">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="931953217909884" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="698083167685621" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="536106279792167">
+                    <conditions>
+                        <condition id="-36" name="Pick overlapping point" sid="194639080871361" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </condition>
+                        <condition id="-36" name="Pick overlapping point" sid="451366002463119" type="System">
+                            <param id="0" name="Object">Platform</param>
+                            <param id="1" name="X">Player.X</param>
+                            <param id="2" name="Y">Player.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="731939406069233" type="Player">
+                            <param id="0" name="Instance variable">Dead</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="254594165482841">
+            <conditions>
+                <condition id="0" name="On function" sid="834113041808825" type="Function">
+                    <param id="0" name="Name">&quot;OnPlayerDead&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="604063225193363" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                    <param id="1" name="Parameter {n}">5{###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Scenario&quot;</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="930226919163202" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

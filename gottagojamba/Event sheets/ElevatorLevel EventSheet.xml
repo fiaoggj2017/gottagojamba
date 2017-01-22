@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ElevatorLevel EventSheet</name>
+    <events>
+        <variable constant="0" name="DROPPED" sid="991704426861610" static="0" type="number">0</variable>
+        <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
+        <include>ElevatorLevel Temperature</include>
+        <include>ElevatorLevel Input</include>
+        <include>PlayerAnimation</include>
+        <event-block sid="859657469143419">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="550666694949074" type="System">
+                    <param id="0" name="Variable">VARIANCE</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">abs(Tiles.Temperature - Obstacle.Temperature)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="473093848256650">
+                    <conditions>
+                        <condition behavior="Sine" id="2" name="Compare period" sid="329229704783310" type="Tiles">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Value">6.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="468944366535674" type="Console">
+                            <param id="0" name="Text">&quot;YOU WIN!&quot;</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="478173228878727" type="Tiles">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="470973890404733" type="Elevador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="543238439385374" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="457184870122023" type="Player">
+                            <param id="0" name="Instance variable">WaitingTimeInSeconds</param>
+                            <param id="1" name="Value">100000</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="395417368285156" type="Tiles">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                        </action>
+                        <action id="-43" name="Go to next/previous layout" sid="132594921053388" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="951744678071155">
+                    <conditions>
+                        <condition behavior="Sine" id="2" name="Compare period" sid="855072947008914" type="Tiles">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Value">6.5</param>
+                        </condition>
+                        <condition behavior="Sine" id="0" name="Is active" sid="732972235404108" type="Tiles" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="162559922735500">
+                            <conditions>
+                                <condition id="-10" name="For" sid="905142968626689" type="System">
+                                    <param id="0" name="Name">&quot;i&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">random(1, 5)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="509837993941670" type="System">
+                                    <param id="0" name="Object to create">Lunch</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Player.X + 10 * random(-5, 5)</param>
+                                    <param id="3" name="Y">Player.Y + 10 * random(-5, 5)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="104670933045452" type="System">
+                                    <param id="0" name="Variable">DROPPED</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="282285103364155">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="622387378165629" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="1" name="Set period" sid="151538680815201" type="Tiles">
+                    <param id="0" name="Period">Tiles.Sine.Period - 0.03</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587591466228203">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="822883578597827" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="808439422633074" type="Indicator">
+                    <param id="0" name="X">TemperatureBar.X - TemperatureBar.Width / 2 + TemperatureBar.Width * Obstacle.Temperature</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="366986385563650">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="576533053792851" type="Lunch">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="119665765390542">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="805468529731440" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="239649090521474" type="Lunch">
+                    <param id="0" name="X">Self.X - (Elevador.Sine.CyclePosition * Elevador.Sine.Magnitude * Elevador.Sine.Period)</param>
+                </action>
+                <action id="-9" name="Set value" sid="280995871488887" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="825311319868602" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

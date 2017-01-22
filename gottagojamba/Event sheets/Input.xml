@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Input</name>
+    <events>
+        <variable constant="1" name="UPDATE_PARAMETERS_CALLBACK" sid="450712585577623" static="0" type="text">DoUpdateParameters</variable>
+        <variable constant="1" name="STORE_PARAMETERS_CALLBACK" sid="593971599717056" static="0" type="text">DoStoreParameters</variable>
+        <variable constant="1" name="RESET_PARAMETERS_CALLBACK" sid="391707759888557" static="0" type="text">DoResetParameters</variable>
+        <variable constant="0" name="LastTimeButtonWasPressed" sid="351198628518649" static="0" type="number">0</variable>
+        <event-block sid="238810946293569">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="481566169930617" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="902447355690594" type="Function">
+                    <param id="0" name="Name">STORE_PARAMETERS_CALLBACK</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="800946021006461">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="462990787813987" type="System">
+                    <param id="0" name="First value">time - LastTimeButtonWasPressed</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="356005197656375" type="Function">
+                    <param id="0" name="Name">RESET_PARAMETERS_CALLBACK</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="747121911002360" type="System">
+                    <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="107549384112497">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="217624673325070" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="714608211653537">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="553029741098570" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="182656062314961" type="Function">
+                            <param id="0" name="Name">UPDATE_PARAMETERS_CALLBACK</param>
+                            <param id="1" name="Parameter {n}">time - LastTimeButtonWasPressed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="388573253499603">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="369575923345366" type="System">
+                            <param id="0" name="Variable">LastTimeButtonWasPressed</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
