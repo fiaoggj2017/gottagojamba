@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>masterSheet</name>
     <events>
-        <include>fontInGame</include>
+        <include>hudSetup</include>
         <include>characterSetup</include>
     </events>
 </c2eventsheet>

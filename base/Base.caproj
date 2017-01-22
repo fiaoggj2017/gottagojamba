@@ -35,7 +35,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Any</prop>
@@ -245,22 +245,61 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="textTries" sid="625701481572964">
+        <object-type name="txtFloor" sid="127017701541383">
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
         </object-type>
-        <object-type name="SpriteFont" sid="127017701541383">
+        <object-type name="Sprite" sid="944318318944509">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="414473464326792" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Paulo\Desktop\GGJ17\Silviao_portrait2.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txtTries" sid="984502872602059">
             <plugin id="Spritefont2" />
             <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
+        </object-type>
+        <object-type name="Marmita" sid="958360610407516">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668210373050989" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Paulo\Desktop\GGJ17\marmita.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9" y="0.1" />
+                            <point x="1" y="0.5" />
+                            <point x="0.9" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.9" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>AssetDump.xml</layout>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>characterSetup.xml</event-sheet>
-        <event-sheet>fontInGame.xml</event-sheet>
+        <event-sheet>hudSetup.xml</event-sheet>
         <event-sheet>masterSheet.xml</event-sheet>
     </event-folder>
     <global-instances>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>hudSetup</name>
+    <events>
+        <event-block sid="320458338024864">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="280296799409141" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="574306557889387" type="System">
+                    <param id="0" name="Object to create">Sprite</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">32</param>
+                    <param id="3" name="Y">32</param>
+                </action>
+                <action id="-3" name="Create object" sid="899546223679394" type="System">
+                    <param id="0" name="Object to create">txtFloor</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">60</param>
+                </action>
+                <action id="-3" name="Create object" sid="764661553928916" type="System">
+                    <param id="0" name="Object to create">txtTries</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">120</param>
+                    <param id="3" name="Y">100</param>
+                </action>
+                <action id="0" name="Set text" sid="634085787956740" type="txtFloor">
+                    <param id="0" name="Text">&quot;Floor:&quot;&amp;&quot;9&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="944374120486307" type="txtTries">
+                    <param id="0" name="Text">&quot;Tries:&quot;&amp;&quot;9&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
