@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BridgeLevel EventSheet</name>
     <events>
         <include>BridgeLevel LunchManagement</include>
         <include>BridgeLevel DebugConsole</include>
-        <include>BridgeLevel Input</include>
+        <include>Input</include>
         <include>BridgeLevel Player</include>
         <include>PlayerAnimation</include>
         <event-block sid="670718174002595">
@@ -28,6 +28,89 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="125048870111228">
+            <conditions>
+                <condition id="0" name="On function" sid="104620846870769" type="Function">
+                    <param id="0" name="Name">&quot;DoStoreParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="551836990889910">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="397473050685488" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="750194996434288" type="BridgeBit">
+                            <param id="0" name="Instance variable">StartingMagnitude</param>
+                            <param id="1" name="Value">BridgeBit.Movement.Magnitude</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="936868294920574">
+            <conditions>
+                <condition id="0" name="On function" sid="985180452320147" type="Function">
+                    <param id="0" name="Name">&quot;DoResetParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="185674689430533">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="598102138467210" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="294456210986353" type="BridgeBit">
+                            <param id="0" name="Instance variable">TargetMagnitude</param>
+                            <param id="1" name="Value">BridgeBit.StartingMagnitude</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="664418055353712">
+            <conditions>
+                <condition id="0" name="On function" sid="391815877169704" type="Function">
+                    <param id="0" name="Name">&quot;DoUpdateParameters&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="654115649397113">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="481055719941504" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="453855784006514" type="BridgeBit">
+                            <param id="0" name="Instance variable">TargetMagnitude</param>
+                            <param id="1" name="Value">abs((Player.Sine.Period - 2 * Function.Param(0)) / Player.Sine.Period) * BridgeBit.StartingMagnitude</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="453138322727861">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="770613063176688" type="System">
+                    <param id="0" name="First value">abs(BridgeBit.Movement.Magnitude - BridgeBit.TargetMagnitude)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Movement" id="2" name="Set magnitude" sid="916128112143125" type="BridgeBit">
+                    <param id="0" name="Magnitude">lerp(BridgeBit.Movement.Magnitude, BridgeBit.TargetMagnitude, dt)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
