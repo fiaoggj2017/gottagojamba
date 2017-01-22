@@ -3,17 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ElevatorLevel EventSheet</name>
     <events>
+        <variable constant="0" name="TimeAtStart" sid="525355746492903" static="0" type="number">0</variable>
         <variable constant="0" name="DROPPED" sid="991704426861610" static="0" type="number">0</variable>
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
         <include>HUD Setup</include>
         <include>ElevatorLevel Temperature</include>
         <include>Common DebugConsole</include>
         <include>Common Input</include>
-        <include>Common Player</include>
+        <include>ElevatorLevel Player</include>
         <include>Common LunchManagement</include>
         <include>Common PlayerAnimation</include>
         <include>ElevatorLevel Input</include>
-        <include>ElevatorLever Player</include>
         <event-block sid="366986385563650">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="869587403658259" type="System" />
@@ -22,6 +22,14 @@
                 <action behavior="Pin" id="0" name="Pin to object" sid="723143947318301" type="Tiles">
                     <param id="0" name="Pin to">Elevador</param>
                     <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Call function" sid="875000176285308" type="Function">
+                    <param id="0" name="Name">&quot;SetupHUD&quot;</param>
+                    <param id="1" name="Parameter {n}">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="326013490726756" type="System">
+                    <param id="0" name="Variable">TimeAtStart</param>
+                    <param id="1" name="Value">time</param>
                 </action>
             </actions>
             <sub-events>
@@ -56,7 +64,7 @@
         <event-block sid="687271907722416">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="337210693141941" type="System">
-                    <param id="0" name="First value">time</param>
+                    <param id="0" name="First value">time - TimeAtStart</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">10</param>
                 </condition>

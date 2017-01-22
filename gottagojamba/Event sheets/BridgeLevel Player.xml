@@ -48,6 +48,10 @@
                     <param id="0" name="Name">&quot;SpillLunch&quot;</param>
                     <param id="1" name="Parameter {n}">random(1,5){###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Scenario&quot;</param>
                 </action>
+                <action id="-11" name="Add to" sid="222686789423544" type="PersistentData">
+                    <param id="0" name="Instance variable">Tries</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-26" name="Restart layout" sid="930226919163202" type="System" />
             </actions>
         </event-block>

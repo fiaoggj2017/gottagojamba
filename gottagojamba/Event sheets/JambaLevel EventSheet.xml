@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>JambaLevel EventSheet</name>
     <events>
+        <include>Common LunchManagement</include>
         <include>HUD Setup</include>
         <include>JambaLevel ObstacleAnimation</include>
         <include>JambaLevel Player</include>
