@@ -99,8 +99,14 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759816704583746" speed="5">
+                <animation framecount="1" loop="0" name="Tile1" pingpong="0" repeatcount="1" repeatto="0" sid="759816704583746" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\GitHub\gottagojamba\assets\ponte1.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Tile2" pingpong="0" repeatcount="1" repeatto="0" sid="386629085400840" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\GitHub\gottagojamba\assets\ponte2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Tile3" pingpong="0" repeatcount="1" repeatto="0" sid="688424883015402" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\GitHub\gottagojamba\assets\ponte3.png" />
                 </animation>
             </animation-folder>
         </object-type>
