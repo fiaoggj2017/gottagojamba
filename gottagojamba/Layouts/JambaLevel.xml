@@ -81,8 +81,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <PinToUID>0</PinToUID>
+                        <PinToDX>0</PinToDX>
+                        <PinToDY>0</PinToDY>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -90,11 +96,11 @@
                         <x>479</x>
                         <y>674</y>
                         <z>0</z>
-                        <width>25</width>
-                        <height>25</height>
+                        <width>15</width>
+                        <height>15</height>
                         <depth>0</depth>
-                        <hotspotX>0.519999981</hotspotX>
-                        <hotspotY>0.519999981</hotspotY>
+                        <hotspotX>0.533333361</hotspotX>
+                        <hotspotY>0.533333361</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -126,6 +132,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -169,6 +178,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -212,6 +224,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -255,6 +270,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -298,6 +316,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -341,6 +362,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -384,6 +408,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -427,6 +454,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -470,6 +500,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -513,6 +546,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -556,6 +592,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Temperature>0</Temperature>
+                        <StartingTemperature>0</StartingTemperature>
+                        <TargetTemperature>0</TargetTemperature>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
                         <StartingMagnitude>0</StartingMagnitude>
@@ -624,6 +663,7 @@
                         <WaitingTimeInSeconds>5</WaitingTimeInSeconds>
                         <MoveEnabled>false</MoveEnabled>
                         <PathFound>false</PathFound>
+                        <Dead>false</Dead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
