@@ -3,11 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>JambaLevel EventSheet</name>
     <events>
+        <include>Common LunchManagement</include>
         <include>HUD Setup</include>
-        <include>PlayerAnimation</include>
         <include>JambaLevel ObstacleAnimation</include>
         <include>JambaLevel Player</include>
-        <include>Input</include>
+        <include>Common PlayerAnimation</include>
+        <include>Common Input</include>
         <event-block sid="236185352417074">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="520926529853652" type="System" />

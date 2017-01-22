@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ElevatorLevel layout start-end</name>
+    <events>
+        <event-block sid="486165718835717">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="844109800006961" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="436021582785368" type="Tiles">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="410659893954920" type="Lunch">
+                    <param id="0" name="Pin to">Elevador</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="849810407667777">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="318417678247455" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="775398077112302" type="Lunch">
+                    <param id="0" name="X">Self.X - (Elevador.Sine.CyclePosition * Elevador.Sine.Magnitude * Elevador.Sine.Period)</param>
+                </action>
+                <action id="-9" name="Set value" sid="162606705202842" type="System">
+                    <param id="0" name="Variable">FLOOR_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="423363929274423" type="System">
+                    <param id="0" name="Variable">PLAYER_TEMPERATURE</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

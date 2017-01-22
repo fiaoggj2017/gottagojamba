@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Common LunchManagement</name>
+    <events>
+        <event-block sid="487047371682739">
+            <conditions>
+                <condition id="0" name="On function" sid="237287519471628" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="319785827073242">
+                    <conditions>
+                        <condition id="-10" name="For" sid="731092283290681" type="System">
+                            <param id="0" name="Name">&quot;ThrowLunches&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="508347770154349" type="Function">
+                            <param id="0" name="Name">&quot;CreateLunch&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(5){###}Function.Param(3) + random(Function.Param(1),Function.Param(2)) * sin(random(0,360)){###}Function.Param(4)+ random(Function.Param(1),Function.Param(2)) * cos(random(0,360))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="249933967635741">
+            <conditions>
+                <condition id="0" name="On function" sid="972305404454068" type="Function">
+                    <param id="0" name="Name">&quot;CreateLunch&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="211845647433073" type="System">
+                    <param id="0" name="Object to create">Lunch</param>
+                    <param id="1" name="Layer">Function.Param(0)</param>
+                    <param id="2" name="X">Function.Param(1)</param>
+                    <param id="3" name="Y">Function.Param(2)</param>
+                </action>
+                <action id="0" name="Call function" sid="817806092630578" type="Function">
+                    <param id="0" name="Name">&quot;DoLunchPin&quot;</param>
+                    <param id="1" name="Parameter {n}">Lunch.UID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

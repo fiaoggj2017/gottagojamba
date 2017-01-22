@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BridgeLevel Player</name>
     <events>
-        <include>Player</include>
+        <include>Common PlayerWithMovement</include>
         <event-block sid="713395397497827">
             <conditions>
                 <condition id="-1" name="Every tick" sid="931953217909884" type="System" />
@@ -46,7 +46,11 @@
             <actions>
                 <action id="0" name="Call function" sid="604063225193363" type="Function">
                     <param id="0" name="Name">&quot;SpillLunch&quot;</param>
-                    <param id="1" name="Parameter {n}">5{###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Scenario&quot;</param>
+                    <param id="1" name="Parameter {n}">random(1,5){###}50{###}75{###}Player.X{###}Player.Y{###}&quot;Scenario&quot;</param>
+                </action>
+                <action id="-11" name="Add to" sid="222686789423544" type="PersistentData">
+                    <param id="0" name="Instance variable">Tries</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="930226919163202" type="System" />
             </actions>

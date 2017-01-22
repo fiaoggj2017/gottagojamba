@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Common Player</name>
+    <events>
+        <variable constant="1" name="PLAYER_DEAD_CALLBACK" sid="778811044662272" static="0" type="text">OnPlayerDead</variable>
+        <event-block sid="690073565416951">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="258297546148784" type="Player">
+                    <param id="0" name="Instance variable">Dead</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Call function" sid="256134690108681" type="Function">
+                    <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Silviao is DEDBIF&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="410842512397232" type="Function">
+                    <param id="0" name="Name">PLAYER_DEAD_CALLBACK</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

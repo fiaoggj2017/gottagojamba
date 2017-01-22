@@ -295,7 +295,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <PinToUID>0</PinToUID>
+                        <PinToUID>-1</PinToUID>
                         <PinToDX>0</PinToDX>
                         <PinToDY>0</PinToDY>
                     </instance-variables>
