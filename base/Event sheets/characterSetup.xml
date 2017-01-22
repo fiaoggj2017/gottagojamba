@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>characterSetup</name>
+    <events>
+        <event-block sid="262430791283466">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="438061981216070" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="461729966267031" type="PlayerAnimation">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="787882913684730" type="PlayerAnimation">
+                    <param id="0" name="Pin to">Player</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="452673081603791">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="967955140410046" type="Player" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="361303368784468" type="Text">
+                    <param id="0" name="Text">Player.Angle</param>
+                </action>
+                <action id="4" name="Set animation" sid="437773233024386" type="PlayerAnimation">
+                    <param id="0" name="Animation">(Player.Angle = 0) ? &quot;runRight&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="250233652091039" type="PlayerAnimation">
+                    <param id="0" name="Animation">(Player.Angle = 90) ? &quot;runDown&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="702487307124053" type="PlayerAnimation">
+                    <param id="0" name="Animation">(Player.Angle = 180) ? &quot;runLeft&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="853176491655878" type="PlayerAnimation">
+                    <param id="0" name="Animation">(Player.Angle = 270) ? &quot;runUp&quot; : PlayerAnimation.AnimationName</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="287869244661193">
+            <conditions>
+                <condition id="-22" name="Else" sid="216430372255564" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="469147952390864" type="PlayerAnimation" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

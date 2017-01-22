@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
@@ -244,13 +245,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="textTries" sid="625701481572964">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
+        </object-type>
+        <object-type name="SpriteFont" sid="127017701541383">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>characterSetup.xml</event-sheet>
+        <event-sheet>fontInGame.xml</event-sheet>
+        <event-sheet>masterSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

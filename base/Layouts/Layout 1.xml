@@ -2,7 +2,7 @@
 <c2layout>
     <name>Layout 1</name>
     <sid>497315168199520</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>masterSheet</event-sheet>
     <size>
         <width>800</width>
         <height>600</height>
@@ -139,6 +139,36 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont" uid="6">
+                    <properties>
+                        <character-width>24</character-width>
+                        <character-height>24</character-height>
+                        <character-set>abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&apos;:!?-()</character-set>
+                        <text>Text1234</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>79</x>
+                        <y>114</y>
+                        <z>0</z>
+                        <width>208</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
