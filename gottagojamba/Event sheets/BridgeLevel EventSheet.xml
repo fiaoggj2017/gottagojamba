@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>BridgeLevel EventSheet</name>
@@ -7,7 +7,7 @@
         <include>BridgeLevel DebugConsole</include>
         <include>BridgeLevel Input</include>
         <include>BridgeLevel Player</include>
-        <include>BridgeLevel PlayerAnimation</include>
+        <include>PlayerAnimation</include>
         <event-block sid="670718174002595">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="510423811880108" type="System" />

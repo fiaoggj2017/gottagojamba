@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>BridgeLevel</name>
     <sid>632269652040459</sid>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LeftBoundary" uid="3">
+                <instance type="LeftBoundary" uid="28">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -58,7 +58,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RightBoundary" uid="4">
+                <instance type="RightBoundary" uid="29">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -87,7 +87,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Platform" uid="0">
+                <instance type="Platform" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -109,7 +109,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Platform" uid="15">
+                <instance type="Platform" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -150,7 +150,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BridgeBit" uid="2">
+                <instance type="BridgeBit" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -209,7 +209,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="6">
+                <instance type="BridgeBit" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -268,7 +268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="7">
+                <instance type="BridgeBit" uid="34">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -327,7 +327,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="8">
+                <instance type="BridgeBit" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -386,7 +386,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="9">
+                <instance type="BridgeBit" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -445,7 +445,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="10">
+                <instance type="BridgeBit" uid="37">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -504,7 +504,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="11">
+                <instance type="BridgeBit" uid="38">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -563,7 +563,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="12">
+                <instance type="BridgeBit" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -622,7 +622,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BridgeBit" uid="13">
+                <instance type="BridgeBit" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -700,7 +700,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ExitDoor" uid="1">
+                <instance type="ExitDoor" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -722,7 +722,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="17">
+                <instance type="Player" uid="42">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -764,20 +764,6 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -794,7 +780,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerAnimation" uid="18">
+                <instance type="PlayerAnimation" uid="43">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -819,7 +805,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Lunch" uid="19">
+                <instance type="Lunch" uid="44">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -869,7 +855,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="DebugConsole" uid="5">
+                <instance type="DebugConsole" uid="45">
                     <properties>
                         <text></text>
                         <placeholder>Debug Console</placeholder>

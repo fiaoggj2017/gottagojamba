@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Gotta Go Jamba</name>
     <description></description>
@@ -574,12 +574,11 @@
         <event-sheet>BridgeLevel Input.xml</event-sheet>
         <event-sheet>BridgeLevel EventSheet.xml</event-sheet>
         <event-sheet>BridgeLevel DebugConsole.xml</event-sheet>
-        <event-sheet>BridgeLevel PlayerAnimation.xml</event-sheet>
         <event-sheet>BridgeLevel LunchManagement.xml</event-sheet>
         <event-sheet>JambaLevel EventSheet.xml</event-sheet>
         <event-sheet>JambaLevel Player.xml</event-sheet>
         <event-sheet>JambaLevel Input.xml</event-sheet>
-        <event-sheet>JambaLevel PlayerAnimation.xml</event-sheet>
+        <event-sheet>PlayerAnimation.xml</event-sheet>
         <event-sheet>JambaLevel ObstacleAnimation.xml</event-sheet>
         <event-sheet>ElevatorLevel Temperature.xml</event-sheet>
         <event-sheet>ElevatorLevel layout start-end.xml</event-sheet>

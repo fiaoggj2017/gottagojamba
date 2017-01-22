@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ElevatorLevel EventSheet</name>
@@ -8,6 +8,7 @@
         <include>ElevatorLevel layout start-end</include>
         <include>ElevatorLevel Temperature</include>
         <include>ElevatorLevel Input</include>
+        <include>PlayerAnimation</include>
         <event-block sid="859657469143419">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="550666694949074" type="System">

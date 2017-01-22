@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ElevatorLevel layout start-end</name>
@@ -14,10 +14,6 @@
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="410659893954920" type="Lunch">
                     <param id="0" name="Pin to">Elevador</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="115308541011083" type="PlayerAnimation">
-                    <param id="0" name="Pin to">Player</param>
                     <param id="1" name="Mode">0</param>
                 </action>
             </actions>

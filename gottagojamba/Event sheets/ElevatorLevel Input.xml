@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ElevatorLevel Input</name>
     <events>
         <variable constant="0" name="PLAYER_TEMPERATURE" sid="412797026514185" static="0" type="number">0</variable>
-        <variable constant="0" name="LastTimeButtonWasPressed2" sid="306353409297582" static="0" type="number">0</variable>
+        <variable constant="0" name="LastTimeButtonWasPressed3" sid="306353409297582" static="0" type="number">0</variable>
         <event-block sid="315475991296516">
             <conditions>
                 <condition id="-18" name="On created" sid="697538112928681" type="Obstacle" />
