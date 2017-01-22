@@ -10,7 +10,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="255346467373173" type="Function">
-                    <param id="0" name="Name">&quot;StorePeriods&quot;</param>
+                    <param id="0" name="Name">&quot;StoreSineParameters&quot;</param>
                     <param id="1" name="Parameter {n}">Obstacle.UID</param>
                 </action>
             </actions>
@@ -28,7 +28,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Call function" sid="968942352708395" type="Function">
-                    <param id="0" name="Name">&quot;ResetPeriods&quot;</param>
+                    <param id="0" name="Name">&quot;ResetSineParameters&quot;</param>
                     <param id="1" name="Parameter {n}">Obstacle.UID</param>
                 </action>
                 <action id="-9" name="Set value" sid="455819382763168" type="System">
@@ -58,8 +58,8 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="532071089811178" type="Function">
-                            <param id="0" name="Name">&quot;UpdatePeriods&quot;</param>
-                            <param id="1" name="Parameter {n}">Obstacle.UID{###}(time - LastTimeButtonWasPressed) * 2</param>
+                            <param id="0" name="Name">&quot;UpdateSineParameters&quot;</param>
+                            <param id="1" name="Parameter {n}">Obstacle.UID{###}(time - LastTimeButtonWasPressed) * 2{###}Obstacle.Sine.Magnitude</param>
                         </action>
                     </actions>
                 </event-block>
@@ -77,7 +77,7 @@
         <event-block sid="532860137808555">
             <conditions>
                 <condition id="0" name="On function" sid="302998804194525" type="Function">
-                    <param id="0" name="Name">&quot;StorePeriods&quot;</param>
+                    <param id="0" name="Name">&quot;StoreSineParameters&quot;</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="865648051963374" type="Obstacle">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -88,12 +88,16 @@
                     <param id="0" name="Instance variable">StartingPeriod</param>
                     <param id="1" name="Value">Obstacle.Sine.Period</param>
                 </action>
+                <action id="-10" name="Set value" sid="235596295346741" type="Obstacle">
+                    <param id="0" name="Instance variable">StartingMagnitude</param>
+                    <param id="1" name="Value">Obstacle.Sine.Magnitude</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="220438403906666">
             <conditions>
                 <condition id="0" name="On function" sid="292193652133053" type="Function">
-                    <param id="0" name="Name">&quot;ResetPeriods&quot;</param>
+                    <param id="0" name="Name">&quot;ResetSineParameters&quot;</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="184826283309122" type="Obstacle">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -104,12 +108,16 @@
                     <param id="0" name="Instance variable">TargetPeriod</param>
                     <param id="1" name="Value">Obstacle.StartingPeriod</param>
                 </action>
+                <action id="-10" name="Set value" sid="131193130889389" type="Obstacle">
+                    <param id="0" name="Instance variable">TargetMagnitude</param>
+                    <param id="1" name="Value">Obstacle.StartingMagnitude</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="123403933130289">
             <conditions>
                 <condition id="0" name="On function" sid="910292006528795" type="Function">
-                    <param id="0" name="Name">&quot;UpdatePeriods&quot;</param>
+                    <param id="0" name="Name">&quot;UpdateSineParameters&quot;</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="170299271309519" type="Obstacle">
                     <param id="0" name="Unique ID">Function.Param(0)</param>
@@ -120,12 +128,21 @@
                     <param id="0" name="Instance variable">TargetPeriod</param>
                     <param id="1" name="Value">Function.Param(1)</param>
                 </action>
+                <action id="-10" name="Set value" sid="329132913597529" type="Obstacle">
+                    <param id="0" name="Instance variable">TargetMagnitude</param>
+                    <param id="1" name="Value">Function.Param(2)</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="844741497722819">
+        <event-block any="1" sid="844741497722819">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="356818132679396" type="System">
                     <param id="0" name="First value">abs(Obstacle.Sine.Period - Obstacle.TargetPeriod)</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0.01</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="187618295390638" type="System">
+                    <param id="0" name="First value">abs(Obstacle.Sine.Magnitude - Obstacle.TargetMagnitude)</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Second value">0.01</param>
                 </condition>
@@ -133,6 +150,9 @@
             <actions>
                 <action behavior="Sine" id="1" name="Set period" sid="946776106550872" type="Obstacle">
                     <param id="0" name="Period">lerp(Obstacle.Sine.Period, Obstacle.TargetPeriod, dt)</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="460912405140864" type="Obstacle">
+                    <param id="0" name="Magnitude">lerp(Obstacle.Sine.Magnitude, Obstacle.TargetMagnitude, dt)</param>
                 </action>
             </actions>
         </event-block>

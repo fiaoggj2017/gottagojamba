@@ -55,6 +55,8 @@
             <instance-variables>
                 <instance-variable name="StartingPeriod" sid="410966431075785" type="number" />
                 <instance-variable name="TargetPeriod" sid="277517688533981" type="number" />
+                <instance-variable name="StartingMagnitude" sid="410966431075786" type="number" />
+                <instance-variable name="TargetMagnitude" sid="410966431075787" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="452995523812481">

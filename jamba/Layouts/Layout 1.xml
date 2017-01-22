@@ -128,6 +128,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -169,6 +171,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -210,6 +214,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -251,6 +257,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -292,6 +300,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -333,6 +343,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -374,6 +386,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -415,6 +429,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -456,6 +472,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -497,6 +515,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -538,6 +558,8 @@
                     <instance-variables>
                         <StartingPeriod>0</StartingPeriod>
                         <TargetPeriod>0</TargetPeriod>
+                        <StartingMagnitude>0</StartingMagnitude>
+                        <TargetMagnitude>0</TargetMagnitude>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
