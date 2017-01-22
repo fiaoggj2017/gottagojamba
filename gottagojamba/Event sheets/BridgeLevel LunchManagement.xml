@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BridgeLevel LunchManagement</name>
+    <events>
+        <event-block sid="487047371682739">
+            <conditions>
+                <condition id="0" name="On function" sid="237287519471628" type="Function">
+                    <param id="0" name="Name">&quot;SpillLunch&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="319785827073242">
+                    <conditions>
+                        <condition id="-10" name="For" sid="731092283290681" type="System">
+                            <param id="0" name="Name">&quot;ThrowLunches&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="508347770154349" type="Function">
+                            <param id="0" name="Name">&quot;CreateLunch&quot;</param>
+                            <param id="1" name="Parameter {n}">Function.Param(5){###}Function.Param(3) + random(Function.Param(1),Function.Param(2)) * sin(random(0,360)){###}Function.Param(4)+ random(Function.Param(1),Function.Param(2)) * cos(random(0,360))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="249933967635741">
+            <conditions>
+                <condition id="0" name="On function" sid="972305404454068" type="Function">
+                    <param id="0" name="Name">&quot;CreateLunch&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="211845647433073" type="System">
+                    <param id="0" name="Object to create">Lunch</param>
+                    <param id="1" name="Layer">Function.Param(0)</param>
+                    <param id="2" name="X">Function.Param(1)</param>
+                    <param id="3" name="Y">Function.Param(2)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="148303772932162">
+                    <conditions>
+                        <condition id="-36" name="Pick overlapping point" sid="390792430780488" type="System">
+                            <param id="0" name="Object">BridgeBit</param>
+                            <param id="1" name="X">Lunch.X</param>
+                            <param id="2" name="Y">Lunch.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="988109693473575" type="Lunch">
+                            <param id="0" name="Layer">BridgeBit.LayerName</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="782643490900528" type="Lunch" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="111542890749533" type="Lunch">
+                            <param id="0" name="Pin to">BridgeBit</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="509783031277985" type="Lunch">
+                            <param id="0" name="Instance variable">PinToUID</param>
+                            <param id="1" name="Value">BridgeBit.UID</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="400218841128590" type="Lunch">
+                            <param id="0" name="Instance variable">PinToDX</param>
+                            <param id="1" name="Value">Lunch.X-BridgeBit.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="441281360538433" type="Lunch">
+                            <param id="0" name="Instance variable">PinToDY</param>
+                            <param id="1" name="Value">Lunch.Y-BridgeBit.Y</param>
+                        </action>
+                        <action disabled="1" id="0" name="Call function" sid="742858770835993" type="Function">
+                            <param id="0" name="Name">&quot;DebugPrint&quot;</param>
+                            <param id="1" name="Parameter {n}">BridgeBit.UID &amp; &quot; - &quot; &amp; Lunch.UID &amp; &quot; - &quot; &amp; Lunch.Pin.PinnedUID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="481650500512696">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="541047625152750" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="689476107077335">
+            <conditions>
+                <condition id="0" name="On function" sid="816530671159004" type="Function">
+                    <param id="0" name="Name">&quot;LunchSetup&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="774921810543019" type="Lunch">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="339523275582224" type="BridgeBit">
+                    <param id="0" name="Unique ID">Lunch.PinToUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="771035778818904" type="Lunch">
+                    <param id="0" name="Layer">BridgeBit.LayerName</param>
+                </action>
+                <action id="-24" name="Move to top" sid="999784090531536" type="Lunch" />
+                <action id="-1" name="Set X" sid="317264712239302" type="Lunch">
+                    <param id="0" name="X">BridgeBit.X + Lunch.PinToDX</param>
+                </action>
+                <action id="-2" name="Set Y" sid="254594218413318" type="Lunch">
+                    <param id="0" name="Y">BridgeBit.Y + Lunch.PinToDY</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="479627880196535" type="Lunch">
+                    <param id="0" name="Pin to">BridgeBit</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
