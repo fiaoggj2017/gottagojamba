@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MAIN</name>
     <events>
+        <variable constant="0" name="INTERVAL" sid="498701796565174" static="0" type="number">0.33</variable>
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
         <include>start layout</include>
         <include>temperature</include>
@@ -15,11 +16,65 @@
                     <param id="2" name="Value">abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE)</param>
                 </condition>
             </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="473093848256650">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="329229704783310" type="System">
+                            <param id="0" name="Variable">INTERVAL</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0.25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="741319158324856" type="System">
+                            <param id="0" name="Variable">INTERVAL</param>
+                            <param id="1" name="Value">999999999</param>
+                        </action>
+                        <action id="0" name="Set text" sid="468944366535674" type="Text2">
+                            <param id="0" name="Text">&quot;YOU WIN!&quot;</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="470973890404733" type="elevador">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="543238439385374" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action disabled="1" id="-43" name="Go to next/previous layout" sid="132594921053388" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="951744678071155">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="644564397833758" type="System">
+                            <param id="0" name="Variable">INTERVAL</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.25</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="397385095635702" type="System">
+                            <param id="0" name="Variable">INTERVAL</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="282285103364155">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="622387378165629" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
             <actions>
-                <action id="0" name="Set text" sid="696219442663947" type="Text">
-                    <param id="0" name="Text">Self.Text &amp; &quot;YOU DIED!&quot; &amp; newline</param>
+                <action id="-11" name="Subtract from" sid="330215661012571" type="System">
+                    <param id="0" name="Variable">INTERVAL</param>
+                    <param id="1" name="Value">0.01</param>
                 </action>
-                <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
             </actions>
         </event-block>
     </events>

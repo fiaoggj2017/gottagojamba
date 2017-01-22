@@ -286,9 +286,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="802767627813429">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Text2" sid="301292975524058">
             <plugin id="Text" />
         </object-type>

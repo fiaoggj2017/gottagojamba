@@ -38,7 +38,7 @@
         <event-block sid="302948870310539">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="177638548902566" type="System">
-                    <param id="0" name="Interval (seconds)">0.25</param>
+                    <param id="0" name="Interval (seconds)">INTERVAL</param>
                 </condition>
             </conditions>
             <actions>
@@ -47,7 +47,7 @@
                     <param id="1" name="Value">10 * aux</param>
                 </action>
                 <action id="0" name="Set text" sid="956163786732625" type="Text2">
-                    <param id="0" name="Text">&quot;FLOOR_TEMPERATURE &quot; &amp; FLOOR_TEMPERATURE &amp; newline &amp; &quot;PLAYER_TEMPERATURE &quot;&amp; PLAYER_TEMPERATURE &amp; newline &amp; &quot;DIFFERENCE &quot; &amp; abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE)</param>
+                    <param id="0" name="Text">&quot;FLOOR_TEMPERATURE &quot; &amp; FLOOR_TEMPERATURE &amp; newline &amp; &quot;PLAYER_TEMPERATURE &quot;&amp; PLAYER_TEMPERATURE &amp; newline &amp; &quot;DIFFERENCE &quot; &amp; abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE) &amp; newline &amp; &quot;INTERVAL &quot; &amp; INTERVAL</param>
                 </action>
             </actions>
             <sub-events>
