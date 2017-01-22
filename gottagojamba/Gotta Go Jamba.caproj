@@ -100,7 +100,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759816704583746" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\GitHub\gottagojamba\assets\ponte1.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -559,6 +559,14 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BridgeLevelBackground" sid="405188257105302">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="950658408732691" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Documents\GitHub\gottagojamba\assets\p5Dungeon.png" />
                 </animation>
             </animation-folder>
         </object-type>
