@@ -120,11 +120,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-43" name="Go to next/previous layout" sid="557722442063599" type="System">
+                <action id="-43" name="Go to next/previous layout" sid="557722442063599" type="System">
                     <param id="0" name="Which">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="500077276324260" type="Lunch" />
-                <action id="-26" name="Restart layout" sid="277508263705897" type="System" />
+                <action disabled="1" id="-9" name="Destroy" sid="500077276324260" type="Lunch" />
+                <action disabled="1" id="-26" name="Restart layout" sid="277508263705897" type="System" />
             </actions>
         </event-block>
     </events>
