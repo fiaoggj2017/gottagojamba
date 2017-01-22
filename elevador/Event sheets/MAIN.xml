@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MAIN</name>
     <events>
-        <variable constant="0" name="INTERVAL" sid="498701796565174" static="0" type="number">0.38</variable>
         <variable constant="0" name="DROPPED" sid="991704426861610" static="0" type="number">0</variable>
         <variable constant="1" name="VARIANCE" sid="164493125424982" static="0" type="number">33</variable>
         <include>layout start-end</include>
@@ -14,26 +13,24 @@
                 <condition id="-14" name="Compare variable" sid="550666694949074" type="System">
                     <param id="0" name="Variable">VARIANCE</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">abs(FLOOR_TEMPERATURE - PLAYER_TEMPERATURE)</param>
+                    <param id="2" name="Value">abs(Tiles.Temperature - Obstacle.Temperature)</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="473093848256650">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="329229704783310" type="System">
-                            <param id="0" name="Variable">INTERVAL</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0.33</param>
+                        <condition behavior="Sine" id="2" name="Compare period" sid="329229704783310" type="Tiles">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Value">6.5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="741319158324856" type="System">
-                            <param id="0" name="Variable">INTERVAL</param>
-                            <param id="1" name="Value">999999999</param>
-                        </action>
                         <action id="0" name="Set text" sid="468944366535674" type="Console">
                             <param id="0" name="Text">&quot;YOU WIN!&quot;</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="478173228878727" type="Tiles">
+                            <param id="0" name="State">0</param>
                         </action>
                         <action behavior="Sine" id="0" name="Set active" sid="470973890404733" type="Elevador">
                             <param id="0" name="State">0</param>
@@ -52,16 +49,11 @@
                 </event-block>
                 <event-block sid="951744678071155">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="644564397833758" type="System">
-                            <param id="0" name="Variable">INTERVAL</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0.33</param>
+                        <condition behavior="Sine" id="2" name="Compare period" sid="855072947008914" type="Tiles">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Value">6.5</param>
                         </condition>
-                        <condition id="-14" name="Compare variable" sid="397385095635702" type="System">
-                            <param id="0" name="Variable">INTERVAL</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
+                        <condition behavior="Sine" id="0" name="Is active" sid="732972235404108" type="Tiles" />
                     </conditions>
                     <actions>
                         <action id="-26" name="Restart layout" sid="149798495798895" type="System" />
@@ -99,9 +91,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="330215661012571" type="System">
-                    <param id="0" name="Variable">INTERVAL</param>
-                    <param id="1" name="Value">0.01</param>
+                <action behavior="Sine" id="1" name="Set period" sid="151538680815201" type="Tiles">
+                    <param id="0" name="Period">Tiles.Sine.Period - 0.03</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587591466228203">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="822883578597827" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="808439422633074" type="Indicator">
+                    <param id="0" name="X">TemperatureBar.X - TemperatureBar.Width / 2 + TemperatureBar.Width * Obstacle.Temperature</param>
                 </action>
             </actions>
         </event-block>

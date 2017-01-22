@@ -17,6 +17,8 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
@@ -125,7 +127,15 @@
             <plugin id="TextBox" />
             <instance-variables>
                 <instance-variable name="ConsoleVisible" sid="471462629217915" type="boolean" />
+                <instance-variable name="LastMessage" sid="705425267102893" type="string" />
+                <instance-variable name="LastMessageCount" sid="194891453823421" type="number" />
+                <instance-variable name="LastCompleteText" sid="572012554867697" type="string" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="779578825518903">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Keyboard" sid="907212716482698">
             <plugin id="Keyboard" />
@@ -139,6 +149,7 @@
                 <instance-variable name="WaitingTimeInSeconds" sid="726292162322479" type="number" />
                 <instance-variable name="MoveEnabled" sid="802275444349180" type="boolean" />
                 <instance-variable name="PathFound" sid="283892924034425" type="boolean" />
+                <instance-variable name="Dead" sid="449946666387832" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="589836829079419">
@@ -149,6 +160,9 @@
                 </behavior-type>
                 <behavior-type name="Timer" sid="768523717442981">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="253714145614671">
+                    <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -322,6 +336,46 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Platform" sid="518702137501085">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="296857320140870" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lunch" sid="742489659623922">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PinToUID" sid="431907025220297" type="number" />
+                <instance-variable name="PinToDX" sid="998046094397054" type="number" />
+                <instance-variable name="PinToDY" sid="389941737747269" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Persist" sid="362558894040343">
+                    <behavior id="Persist" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="561669842726039">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="575744220434822" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.533333">
+                        <collision-poly>
+                            <point x="0.133333" y="0.133333" />
+                            <point x="0.466667" y="0" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="1" y="0.466667" />
+                            <point x="0.866667" y="0.866667" />
+                            <point x="0.466667" y="1" />
+                            <point x="0.133333" y="0.866667" />
+                            <point x="0" y="0.466667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -333,6 +387,7 @@
         <event-sheet>BridgeLevel.xml</event-sheet>
         <event-sheet>DebugConsole.xml</event-sheet>
         <event-sheet>PlayerAnimation.xml</event-sheet>
+        <event-sheet>Lunch.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="14" />
