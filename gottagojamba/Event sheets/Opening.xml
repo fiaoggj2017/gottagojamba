@@ -56,10 +56,38 @@
                 <action id="-16" name="Wait" sid="547133748999067" type="System">
                     <param id="0" name="Seconds">4</param>
                 </action>
-                <action id="-43" name="Go to next/previous layout" sid="190770385896940" type="System">
-                    <param id="0" name="Which">0</param>
+                <action id="-4" name="Set layer visible" sid="933142683705419" type="System">
+                    <param id="0" name="Layer">&quot;title&quot;</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="240572733214639" type="HUDTries">
+                    <param id="0" name="&apos;On&apos; time">1</param>
+                    <param id="1" name="&apos;Off&apos; time">1</param>
+                    <param id="2" name="Duration">999</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="667691677636821">
+            <conditions>
+                <condition id="-9" name="Layer is visible" sid="645834202284559" type="System">
+                    <param id="0" name="Layer">&quot;title&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="790519221533575">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="216723094546683" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="604379900693020" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

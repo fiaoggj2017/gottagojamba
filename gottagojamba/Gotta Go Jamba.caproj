@@ -19,6 +19,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -45,7 +46,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
         <prop name="Orientations">Any</prop>
@@ -103,6 +104,11 @@
         </object-type>
         <object-type name="HUDTries" sid="984502872602059">
             <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Flash" sid="671294523187990">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
             <texture original-source="C:\Users\Paulo\Desktop\GGJ17\font_ingame.png" />
         </object-type>
         <object-type name="ExitDoor" sid="808490603696994">
@@ -668,6 +674,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite3" sid="743592989238828">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="856528904084576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Paulo\Desktop\GGJ17\telaTituloFinal.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -698,8 +712,8 @@
         <event-sheet>EndScene EventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="59" />
-        <global-instance type="Function" uid="60" />
+        <global-instance type="Keyboard" uid="63" />
+        <global-instance type="Function" uid="64" />
     </global-instances>
     <sounds-folder />
     <music-folder />
